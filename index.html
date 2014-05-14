@@ -1,0 +1,21 @@
+    <div id="infopanel">
+        
+        <div id="debug">
+            <h2>Debug</h2>
+            <textarea id="debugText">Start game.</textarea>
+            <input type="button" value="Clear Debug" onclick="clearDebug()">
+            <input type="button" value="Hide Debug" onclick="hideDebug()">
+        </div>
+    </div>
+
+<script type="text/javascript">
+
+function clearDebug() {
+    var debugTextArea = document.getElementById("debugText");
+    debugTextArea.innerHTML = "xxx";
+}
+
+clearDebug();
+            </script>
+
+        
