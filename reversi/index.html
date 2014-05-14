@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Reversi</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+
+        <script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+        <script type="text/javascript" src="js/driver.js"></script>
+
+        <script type="text/javascript" src="js/debug.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+        <script type="text/javascript" src="js/getDir.js"></script>
+        <script type="text/javascript" src="js/hint.js"></script>
+        <script type="text/javascript" src="js/slotClicked.js"></script>
+        <script type="text/javascript" src="js/variables.js"></script>
+        <script type="text/javascript" src="js/verifyMoves.js"></script>
+
+
+		
+
+    </head>
+    <body>
+        <div id="content">
+            <div id="header"><h1>Reversi</h1></div>
+            <div id="board">
+                <table>
+                <script type="text/javascript">
+
+                    for(var y = 1; y < NUMBER_COLS - 1; y++) 
+					{
+                        document.write("<tr>");
+                        for(var x = 0; x < NUMBER_ROWS; x++) 
+						{
+                            document.write("<td>");
+                            document.write("<img id=\"slot" + y + "x" + x + "\" src=\"images/empty.png\">");
+                            document.write("</td>");
+                        }
+                        document.write("</tr>");
+                    }
+					
+                </script>
+                </table>
+
+			          </div>
+
+            <div id="infopanel">
+                <div id="dialog"><p id="dialogText">Some text here</p></div>
+
+					<center>
+					<script = text/javascript> 
+						document.write("<span id=\"playerTurn\"> Player <b>" + currentTurn + "</b>'s turn " + "</span>");
+
+					
+					</script>
+					</center>
+					
+					<div class="playerStats">
+                    <p id="scoreTxt">
+
+					<script = text/javascript> 
+					
+	document.write("<img src = \"images/black.png\">");
+	document.write("<span id=\"playerScore1\"><myStyle> = " + counterP1 + " </myStyle></span> ");
+	
+	document.write("<img src = \"images/white.png\">");
+	document.write("<span id=\"playerScore2\"><myStyle> = " + counterP2 + "</myStyle></span>");					
+					</script>
+
+					</p>
+                </div>
+                <div id="options">
+                    <a href="#restart">New Game</a> - 
+                    <a href="#skip">Skip Turn</a> - 
+                    <a href="#end">End Game</a>
+                    <br>Show Hint (<a href="#hint" onclick = "hint.on()">On</a> / <a href="#hint" onclick = "hint.off()">Off</a>)
+
+
+                </div>
+                <div id="debug">
+                    <h2>Debug</h2>
+                    <textarea id="debugText"></textarea>
+                    <input type="button" value="Clear Debug" onclick="clearDebug()">
+                    <input type="button" value="Hide Debug" onclick="hideDebug()">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    color:#000000;
+    background-color:#FFFFFF;
+}
+
+img {
+}
+
+h1 {
+    margin:5px;
+}
+
+h2 {
+    margin:0px;
+}
+
+p {
+    margin:0px;
+}
+
+table, th, td {
+    border: 1px solid #999999;;
+}
+
+table {
+    border-collapse:collapse;
+}
+
+tr {
+    height:40px;
+}
+
+td {
+    width:40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#content {
+    margin:auto;
+    width:348px;
+    height:420px;
+}
+
+#board, #infopanel {
+    float: left;
+}
+
+#board {
+    width:100%;
+}
+
+#infopanel {
+    width:100%;
+    background-color:#f1f1f1;
+    margin-top:10px;
+}
+
+#header {
+    width:100%;
+    text-align:center;
+}
+
+.playerStats {
+    width:322px;
+    float:left;
+    text-align:center;
+    border:1px solid #DDDDDD;
+    margin:5px;
+    padding:5px;
+    background-color:#ffffff;
+}
+
+#options {
+    width:312px;
+    margin:5px;
+    border:1px solid #DDDDDD;
+    background-color:#ffffff;
+    clear: both;
+    padding: 10px;
+    text-align:center;
+}
+
+#dialog {
+    width:312px;
+    background-color:#FFF47A;
+    border:1px solid #FCE700;
+    padding:10px;
+    margin:5px;
+    text-align:center;
+}
+
+#debug { 
+    width:312px;
+    border:1px dashed #999999;
+    margin:5px;
+    padding:10px;
+    border:1px solid #DDDDDD;
+    background-color:#ffffff;
+}
+
+#debugText {
+    width:280px;
+    height:105px;
+}
+
+myStyle
+{
+	color:black;
+	font-size:37pt;
+	font-style:bold;
+}
+
