@@ -6,7 +6,7 @@ Published: true
 ---
 
 <script type="text/javascript">
-	var theAddress = "http://lawrenceting.tk/automator-workflows/"
+	var theAddress = "http://google.com"
 	document.write("Redirecting to " + theAddress);
 	window.location = theAddress
 </script>
