@@ -17,7 +17,7 @@ Published: true
 			.css("border-width","1px")
 			.css("border-color","black")
 			.css("width","30%")
-			.css("padding","5px"); 
+			.css("padding","1px"); 
 	});
 </script>
 
