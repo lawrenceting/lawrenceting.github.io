@@ -1,6 +1,6 @@
 ---
 layout: page
-Title: AppleScript
+title: AppleScript
 ---
 
 A repository of AppleScript(s) / Shell Scripts that I use to improve my workflow. If any of the links are broken, comment below and I'll try to reupload a working link as soon as possible.[^0]
