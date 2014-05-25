@@ -74,9 +74,9 @@ var userstyles = {
 				"color: auto;" + 
 				"text-decoration: none;" + 
 				"padding: 3px 5px 0 5px;" + 
-				"border-style: dashed;" + 
-				"border-width: 1px;" + 
-				"border-color: black;" + 
+				"border-style: ;" + 
+				"border-width: ;" + 
+				"border-color: ;" + 
 			"}" + 
 
 			"#userstyles-container li a:hover .userstyles-style-name {" + 
@@ -84,7 +84,7 @@ var userstyles = {
 			"}" + 
 
 			"#userstyles-container .userstyles-style-info {" + 
-				"font-size: 12px;" + 
+				"font-size: ;" + 
 				"color: green;" + 
 			"}";
 
