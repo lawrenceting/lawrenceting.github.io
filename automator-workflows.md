@@ -60,8 +60,7 @@ Internet
 <a href="https://www.dropbox.com/sh/6ziv4165jnaycay/USoi6M2sO9" target="_blank">Download</a>
 <hr>
 
-Files and Folders
-----------------------
+<h3><div id="Files and Folders">Files and Folders</div></h3>
     ⌫ Delete Files Permanently
     ⏏  Eject All Disks
     New Folder with Selection
