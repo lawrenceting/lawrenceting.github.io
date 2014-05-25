@@ -8,7 +8,6 @@ Published: true
 Tags: Firefox, Stylish, User Styles, All-in-One Sidebar
 ---
 
-
 <div id="userstyles-container">
 
 	<script type="text/javascript" src="{{ site.url }}/js/User Styles/v1.js"></script>
