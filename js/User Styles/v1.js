@@ -84,7 +84,7 @@ var userstyles = {
 			"}" + 
 
 			"#userstyles-container .userstyles-style-info {" + 
-				"font-size: ;" + 
+				"font-size: 80%;" + 
 				"color: green;" + 
 			"}";
 
