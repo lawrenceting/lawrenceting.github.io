@@ -1,9 +1,12 @@
-Title: Automator Workflows
+---
+layout: page
+title: Automator Workflows
 Slug: automator-workflows
 Date: 2013-01-24 17:00
 Type: page
 Tags: Automator
 Published: true
+---
 
 A repository of Automator Workflows that I use to improve my workflow. If any of the links are broken, comment below and I'll try to reupload a working link as soon as possible.[^0]
 

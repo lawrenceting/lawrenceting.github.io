@@ -74,9 +74,9 @@ var userstyles = {
 				"color: auto;" + 
 				"text-decoration: none;" + 
 				"padding: 3px 5px 0 5px;" + 
-				"border-style: ;" + 
-				"border-width: ;" + 
-				"border-color: ;" + 
+				"border-style: dashed;" + 
+				"border-width: 1px;" + 
+				"border-color: black;" + 
 			"}" + 
 
 			"#userstyles-container li a:hover .userstyles-style-name {" + 
