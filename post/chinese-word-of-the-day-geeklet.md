@@ -7,7 +7,7 @@ Published: true
 ---
 
 <script type="text/javascript">
-	var theAddress = "{{ site.url }}/post/chinese-word-of-the-day-geeklet"
+	var theAddress = "{{ site.url }}/2014/04/22/Chinese-Word-of-the-Day-Geeklet/"
 	document.write("Redirecting to " + theAddress);
 	window.location = theAddress
 </script>

@@ -7,7 +7,7 @@ Published: true
 ---
 
 <script type="text/javascript">
-	var theAddress = "http://lawrenceting.tk/"
+	var theAddress = "{{ site.url }}/"
 	document.write("Redirecting to " + theAddress);
 	window.location = theAddress
 </script>
