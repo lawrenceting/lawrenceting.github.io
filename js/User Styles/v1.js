@@ -73,7 +73,7 @@ var userstyles = {
 				"display: block;" + 
 				"color: auto;" + 
 				"text-decoration: none;" + 
-				"padding: 3px 5px 0 5px;" + 
+				"padding: 3px 5px 3px 5px;" + 
 				"border-style: ;" + 
 				"border-width: ;" + 
 				"border-color: ;" + 
