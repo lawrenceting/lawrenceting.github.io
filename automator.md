@@ -6,7 +6,7 @@ Published: true
 ---
 
 <script type="text/javascript">
-	var theAddress = "http://google.com"
+	var theAddress = "{{ site.url }}/automator-workflows"
 	document.write("Redirecting to " + theAddress);
 	window.location = theAddress
 </script>
