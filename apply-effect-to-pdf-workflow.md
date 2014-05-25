@@ -6,7 +6,7 @@ Published: true
 ---
 
 <script type="text/javascript">
-	var theAddress = "{{ site.url }}/automator-workflows#Document Files"
+	var theAddress = "{{ site.url }}/automator-workflows#Files and Folders"
 	document.write("Redirecting to " + theAddress);
 	window.location = theAddress
 </script>
