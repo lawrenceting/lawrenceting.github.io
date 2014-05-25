@@ -1,5 +1,7 @@
+---
 Title: This is your blog, delivered by scriptogr.am
 Date: 2013-01-24 17:00
+---
 
 Thank you for using scriptogr.am. We hope you’ll enjoy the app. It’s designed to be fast, simple and to get the most creativity out of you.
 

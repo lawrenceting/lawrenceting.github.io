@@ -1,6 +1,8 @@
+---
 Title: Turn App Nap Off (Script)
 Date: 2014-03-10 07:00
 Tags: Automator, AppleScript
+---
 
 Since there’s no way to turn app nap off universally, I’ve created a script that turns on/off app nap for applications in the Applications folder (including apps in subfolders).
 
