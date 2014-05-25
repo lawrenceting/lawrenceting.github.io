@@ -1,7 +1,10 @@
-Title: Donate
+---
+layout: page
+title: Donate
 Date: 2014-05-01 17:00
 Type: page
 Published: true
+---
 
 <script type="text/javascript">
 	$(document).ready(function(){
