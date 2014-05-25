@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+
+        <script type="text/javascript" src="js/variables.js"></script>
+        <script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+        <script type="text/javascript" src="js/driver.js"></script>
+        <script type="text/javascript" src="js/debug.js"></script>
+
+        <script type="text/javascript" src="js/ai.js"></script>
+        <script type="text/javascript" src="js/ai_block.js"></script>
+        <script type="text/javascript" src="js/ai_block2steps.js"></script>
+        <script type="text/javascript" src="js/ai_detect2steps.js"></script>
+        <script type="text/javascript" src="js/ai_start.js"></script>
+        <script type="text/javascript" src="js/ai_win.js"></script>
+		
+        <script type="text/javascript" src="js/endGame.js"></script>
+        <script type="text/javascript" src="js/flipOver.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+        <script type="text/javascript" src="js/skipTurn.js"></script>
+        <script type="text/javascript" src="js/slotClicked.js"></script>
+        <script type="text/javascript" src="js/threeOfaKind.js"></script>
+		
+    </head>
+    <body>
+        <div id="content">
+            <div id="header"><h1>Tic Tac Toe</h1></div>
+            <div id="board">
+								<center>
+
+                <table>
+                <script type="text/javascript">
+
+                    for(var y = 1; y < NUMBER_ROWS - 1; y++) 
+					{
+                        document.write("<tr>");
+                        for(var x = 0; x < NUMBER_COLS; x++) 
+						{
+                            document.write("<td>");
+                            document.write("<img id=\"slot" + y + "x" + x + "\" src=\"images/empty.png\">");
+                            document.write("</td>");
+                        }
+                        document.write("</tr>");
+                    }
+					
+                </script>
+                </table>
+					</center>
+
+			          </div>
+
+            <div id="infopanel">
+                <div id="dialog"><p id="dialogText">Some text here</p></div>
+
+
+					
+					<div class="playerStats">
+                    <p id="scoreTxt">
+
+
+
+					</p>
+                </div>
+                <div id="options">
+                    <a href="#restart">New Game</a> - 
+                    <a href="#skip">Skip Turn</a> - 
+                    <a href="#end">End Game</a>
+
+                </div>
+                <div id="debug">
+                    <h2>Debug</h2>
+                    <textarea id="debugText"></textarea>
+                    <input type="button" value="Clear Debug" onclick="clearDebug()">
+                    <input type="button" value="Hide Debug" onclick="hideDebug()">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
