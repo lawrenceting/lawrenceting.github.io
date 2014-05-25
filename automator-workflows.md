@@ -19,7 +19,7 @@ Text
 <a href="https://www.dropbox.com/sh/99opxyit21oi6p8/IESug4nEDV" target="_blank">Download</a>
 <hr>
 
-<h3><div id="Document-Files">Document Files</div></h3>
+<h3><div id="Document Files">Document Files</div></h3>
     ▶ Compress PDF
     ▶ Convert Documents To PDF
     ▶ Convert Image to PDF
