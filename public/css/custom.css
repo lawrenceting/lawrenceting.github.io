@@ -12,7 +12,7 @@
 .share-buttons {
   border-top: 1px solid #eee;
   margin: 20px 0;
-  padding: 20px 0;
+  padding: 0px 0;
 }
 .share-buttons:after {
   display: table;
