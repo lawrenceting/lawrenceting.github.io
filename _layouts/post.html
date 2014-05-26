@@ -8,31 +8,28 @@ layout: default
   {{ content }}
 </div>
 
+  <!-- Social -->
+     <div class="share-buttons">
+      <div class="share-twitter">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{title}}">Tweet</a>
+      </div>
 
-<!-- Social -->
- <div class="share-buttons">
+      <div class="share-gplus">
+        <g:plusone size="medium" href="{{permalink}}"></g:plusone>
+      </div>
 
-              <div class="share-twitter">
-                <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{title}}">Tweet</a>
-              </div>
+      <div class="share-facebook">
+        <div class="fb-like" data-href="{{permalink}}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="arial"></div>
+      </div>
+    </div>      
+    <script async src="{{ site.url }}/js/Social.js"></script>
+  <!-- Social -->
 
-              <div class="share-gplus">
-                <g:plusone size="medium" href="{{permalink}}"></g:plusone>
-              </div>
-
-              <div class="share-facebook">
-                <div class="fb-like" data-href="{{permalink}}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="arial"></div>
-              </div>
-
-            </div>
-            <!-- Social -->
-<script async src="//dl.dropboxusercontent.com/s/pbi5yzou4p6e0rl/social.js"></script>
-
-    <!-- Disqus Comment -->
+  <!-- Disqus Comment -->
     <div id="disqus_thread"></div>
     <script id="disqus_js" async src="{{ site.url }}/js/disqus.js"></script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <!-- Disqus Comment -->
+  <!-- Disqus Comment -->
 
 <div class="related">
   <h2>Related Posts</h2>
