@@ -9,3 +9,8 @@
 */
 
 /* Share buttons */
+.addthis_toolbox addthis_default_style addthis_32x32_style {
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+  padding: 20px 0;
+}
