@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-	sortMenu("div.#menu", "a"); //Sort menu alphabetically
+	sortMenu(".sidebar-nav", "li"); //Sort menu alphabetically
 
 });
 
