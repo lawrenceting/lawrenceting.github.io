@@ -1,5 +1,8 @@
-Title: ExpressCard USB on MacBook Pro Late 2008
+---
+layout: post
+title: ExpressCard USB on MacBook Pro Late 2008
 Date: 2014-04-25 08:41 
+---
 
 Install ExpressCard USB on MacBook Pro Late 2008, cost around $10, get it cheaply on ebay or amazon. add an extra USB 3.0 port, faster than USB 2.0 
 
