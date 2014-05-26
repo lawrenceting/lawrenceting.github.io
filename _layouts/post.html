@@ -9,6 +9,11 @@ layout: default
 
     <!-- Social -->
      <div class="share-buttons">
+
+      <div class="share-facebook">
+        <div class="fb-like" data-href="{{permalink}}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="arial"></div>
+      </div>
+
       <div class="share-twitter">
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{title}}">Tweet</a>
       </div>
@@ -17,9 +22,6 @@ layout: default
         <g:plusone size="medium" href="{{permalink}}"></g:plusone>
       </div>
 
-      <div class="share-facebook">
-        <div class="fb-like" data-href="{{permalink}}" data-send="false" data-layout="button_count"></div>
-      </div>
     </div>      
     <script async src="{{ site.url }}/public/js/social.js"></script>
   <!-- Social -->
