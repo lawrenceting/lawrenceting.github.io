@@ -1,0 +1,24 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Lawrence Ting
+tagline:          'Scripts, Workflows, Learning to Code, Work in Progress etc…'
+description:      'Scripts, Workflows, Learning to Code, Work in Progress etc…'
+url:              //lawrenceting.github.io
+
+author:
+  name:           'Lawrence Ting'
+  url:            https://twitter.com/mdo
+
+paginate:         5
+
+# Custom vars
+version:          2.0.0
+
+github:
+  repo:           https://github.com/lawrenceting/lawrenceting.github.io
