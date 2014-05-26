@@ -76,7 +76,7 @@ var userstyles = {
 				"padding: 3px 5px 3px 5px;" + 
 				"border-style: ;" + 
 				"border-width: ;" + 
-				"border-color: red;" + 
+				"border-color: ;" + 
 			"}" + 
 
 			"#userstyles-container li a:hover .userstyles-style-name {" + 

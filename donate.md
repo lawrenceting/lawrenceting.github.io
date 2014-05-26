@@ -12,6 +12,7 @@ Published: true
 		$("div.#disqus_thread")
 			.remove(); //Hide disqus
 
+/*
 		$("div.#donate_button")
 			.css("border-style","dashed")
 			.css("border-width","1px")
@@ -19,6 +20,8 @@ Published: true
 			.css("width","30%")
 			.css("padding","5px"); 
 	});
+*/
+
 </script>
 
 Thanks for visiting! If you found anything useful from this site, please help me with a donation.
