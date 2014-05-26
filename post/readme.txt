@@ -1,1 +1,0 @@
-old scriptogram folder - redirect
