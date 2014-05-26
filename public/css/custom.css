@@ -19,7 +19,7 @@
   content: '';
   clear: both;
 }
-.share-buttons div { float: left; }
+.share-buttons div { float: right; }
 .share-buttons > .share-facebook, .share-buttons > .share-twitter, .share-buttons > .share-gplus {
   opacity: .5;
 }
@@ -29,5 +29,5 @@
   opacity: 1
 }
 .share-twitter {
-  float: left;
+  float: right;
 }
