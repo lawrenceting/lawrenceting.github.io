@@ -19,8 +19,9 @@ Published: true
 			.css("border-color","black")
 			.css("width","30%")
 			.css("padding","5px"); 
-	});
 */
+	});
+
 
 </script>
 
