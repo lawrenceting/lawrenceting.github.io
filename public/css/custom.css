@@ -1,12 +1,12 @@
 @charset "utf-8";
-/*
+
 * { background-color: rgba(255,0,0,.2); }
 * * { background-color: rgba(0,255,0,.2); }
 * * * { background-color: rgba(0,0,255,.2); }
 * * * * { background-color: rgba(255,0,255,.2); }
 * * * * * { background-color: rgba(0,255,255,.2); }
 * * * * * * { background-color: rgba(255,255,0,.2); }
-*/
+
 
 /* Share buttons */
 .share-buttons {
@@ -21,7 +21,6 @@
 }
 .share-buttons div { 
 	float: left; 
-	position:relative;
 }
 .share-buttons > .share-facebook, .share-buttons > .share-twitter, .share-buttons > .share-gplus {
   opacity: .5;
@@ -31,8 +30,7 @@
 .share-buttons:hover > .share-gplus {
   opacity: 1
 }
-/*
+
 .share-twitter {
   float: left;
 }
-*/
