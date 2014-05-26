@@ -9,25 +9,3 @@
 */
 
 /* Share buttons */
-.share-buttons {
-  border-top: 1px solid #eee;
-  margin: 20px 0;
-  padding: 20px 0;
-}
-.share-buttons:after {
-  display: table;
-  content: '';
-  clear: both;
-}
-.share-buttons div { float: right; }
-.share-buttons > .share-facebook, .share-buttons > .share-twitter, .share-buttons > .share-gplus {
-  opacity: .5;
-}
-.share-buttons:hover > .share-facebook,
-.share-buttons:hover > .share-twitter,
-.share-buttons:hover > .share-gplus {
-  opacity: 1
-}
-.share-twitter {
-  float: right;
-}
