@@ -11,8 +11,8 @@
 /* Share buttons */
 .share-buttons {
   border-top: 1px solid #eee;
-  margin: 0px 0;
-  padding: 0px 0;
+  margin: 20px 0;
+  padding: 20px 0;
 }
 .share-buttons:after {
   display: table;
@@ -21,6 +21,8 @@
 }
 .share-buttons div { 
 	float: left; 
+	margin: 0px auto;
+	padding: 0px auto;
 }
 .share-buttons > .share-facebook, .share-buttons > .share-twitter, .share-buttons > .share-gplus {
   opacity: .5;
