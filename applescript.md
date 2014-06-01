@@ -1,10 +1,10 @@
 ---
 layout: page
 title: AppleScript
+tags: AppleScript
 Slug: applescript
 Date: 2013-01-24 17:00
 Type: page
-Tags: AppleScript
 Published: true
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Automator Workflows
+tags: Automator
 Slug: automator-workflows
 Date: 2013-01-24 17:00
 Type: page
-Tags: Automator
 Published: true
 ---
 
