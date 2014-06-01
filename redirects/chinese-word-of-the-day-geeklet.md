@@ -1,7 +1,7 @@
 ---
 title: Redirecting...
 published: false
-permalink: post/post/chinese-word-of-the-day-geeklet/
+permalink: post/chinese-word-of-the-day-geeklet/
 layout: post
 Slug: geektool
 Date: 2000-01-24 17:00
