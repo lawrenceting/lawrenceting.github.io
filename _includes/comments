@@ -1,4 +1,4 @@
-{% if page.comments != false %}
+{% if site.comments.provider and page.comments != false %}
 
 <div id="disqus_thread"></div>
 <script async src="{{ site.url }}/public/js/disqus.js"></script>
