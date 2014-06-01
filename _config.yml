@@ -27,7 +27,7 @@ github:
 # Set 'provider' to the comment provider you want to use.
 # Set 'provider' to false to turn commenting off globally.
 #
-comments :
-	provider : disqus
-	disqus :
-  		short_name : lawrenceting
+comments:
+	provider: disqus
+	disqus:
+  		short_name: lawrenceting
