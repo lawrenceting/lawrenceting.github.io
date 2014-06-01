@@ -3,7 +3,7 @@ markdown:         redcarpet
 highlighter:      pygments
 
 # Permalinks
-permalink:        date
+permalink:        none
 
 # Setup
 title:            Lawrence Ting
