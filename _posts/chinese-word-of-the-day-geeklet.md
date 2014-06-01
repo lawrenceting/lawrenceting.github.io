@@ -1,7 +1,6 @@
 ---
 title: Redirecting...
 published: true
-permalink: xxx
 layout: post
 Slug: geektool
 Date: 2000-01-24 17:00
