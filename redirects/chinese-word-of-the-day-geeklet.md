@@ -1,6 +1,6 @@
 ---
 title: Redirecting...
-published: false
+published: true
 permalink: xxx
 layout: post
 Slug: geektool
