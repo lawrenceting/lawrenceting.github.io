@@ -1,7 +1,5 @@
 ---
 title: Redirecting...
-permalink: xxx
-layout: default
 Slug: geektool
 Date: 2000-01-24 17:00
 ---
