@@ -1,1 +1,1 @@
-alert("{{ site.comments.disqus.short_name }}");
+{{ site.comments.disqus.short_name }}
