@@ -1,8 +1,7 @@
 ---
 title: Redirecting...
-published: false
 permalink: xxx
-layout: post
+layout: page
 Slug: geektool
 Date: 2000-01-24 17:00
 ---
