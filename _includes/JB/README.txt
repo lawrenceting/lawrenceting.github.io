@@ -1,1 +1,0 @@
-from jekyll-bootstrap
