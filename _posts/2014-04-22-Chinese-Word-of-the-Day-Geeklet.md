@@ -2,6 +2,7 @@
 title: Chinese Word of the Day Geeklet
 comments: true
 layout: post
+permalink: date
 Date: 2014-04-22 07:00
 Tags: Geektool, Geeklet, Shell Script
 ---
