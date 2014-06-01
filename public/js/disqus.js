@@ -7,3 +7,6 @@ var disqus_shortname = '{{ site.comments.disqus.short_name }}'; // required: rep
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
+
+alert ("{{ site.comments.disqus.short_name }}");
+
