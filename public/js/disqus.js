@@ -8,5 +8,5 @@ var disqus_shortname = '{{ site.comments.disqus.short_name }}'; // required: rep
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
 
-alert ("{{ site.comments.disqus.short_name }}");
+alert ("xxx");
 
