@@ -28,7 +28,7 @@ github:
 # Set 'provider' to false to turn commenting off globally.
 #
 JB :
-comments :
-	provider : disqus
-	disqus :
-		short_name : lawrenceting
+	comments :
+		provider : disqus
+		disqus :
+			short_name : lawrenceting
