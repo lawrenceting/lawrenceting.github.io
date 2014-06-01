@@ -1,6 +1,5 @@
 {% if page.comments != false %}
 
-{{ site.comments.disqus.short_name }}
 
 <div id="disqus_thread"></div>
 <script async src="{{ site.url }}/public/js/disqus.js"></script>
