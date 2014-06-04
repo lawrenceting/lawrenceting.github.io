@@ -11,7 +11,7 @@ Notice how the original USB ports are blocked. You can add additionally USB port
 
 <img src="img/ExpressCard-USB.JPG"/>
 
-My MacBook Pro (late 2008) does not readily support an ExpressCard USB. You have to download 3rd party drivers.
+My MacBook Pro (Late 2008) does not readily support the ExpressCard USB. You have to download 3rd party drivers.
 
 **Requirements:**
 
