@@ -5,7 +5,7 @@ comments: true
 Date: 2014-04-25 08:41 
 ---
 
-Notice how the original USB ports are blocked. You can add additionally USB ports with an ExpressCard USB. You can get one cheaply on eBay or Amazon for around $10.
+Notice how the original USB ports are all used up. You can add more  USB ports with an ExpressCard USB. You can get it cheaply on eBay or Amazon for around $10.
 
 <img src="img/ExpressCard-USB-Blocked.jpg"/>
 
@@ -15,10 +15,10 @@ My MacBook Pro (Late 2008) does not readily support the ExpressCard USB. You hav
 
 **Requirements:**
 
-1. Get an Expresscard USB that has a `uPD720202` Chipset
+1. Make sure you get an Expresscard USB that has a `uPD720202` Chipset.
 2. <a href="http://sourceforge.net/projects/genericusbxhci/files/latest/download" target="_blank">Download</a> the driver by zenith432 
-3. <a href="http://cvad-mac.narod.ru/index/0-4" target="_blank">Download</a> Kext Utility
-4. Install the driver using Kext Utility and restart
+3. <a href="http://cvad-mac.narod.ru/index/0-4" target="_blank">Download</a> Kext Utility.
+4. Install the driver using Kext Utility and restart.
 
 **Some Problems:**
 
