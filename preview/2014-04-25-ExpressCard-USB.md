@@ -6,9 +6,9 @@ comments: true
 Date: 2014-04-25 08:41 
 ---
 
-Install ExpressCard USB on MacBook Pro Late 2008, cost around $10, get it cheaply on ebay or amazon. add an extra USB 3.0 port, faster than USB 2.0 
+Install ExpressCard USB on MacBook Pro Late 2008. You can get it cheaply on ebay or amazon at around $10. 
 
-Notice how the USB ports at the back are exhausted. Now, i need not worry as there are 2 additional USB ports in the front. Another plus, the USB ports are hidden. No need to worry about enormous USB modem blocking the USB ports. 
+Notice how the USB port at the back are blocked. The ExpressCard USB will solve this problem. Plus, the USB ports are hidden. No need to worry about an enormous USB device blocking the USB ports. 
 
 ![alt text](http://terrywhite.com/wp-content/uploads/2009/04/usbadapter_0013.jpg "Logo Title Text 1")
 
