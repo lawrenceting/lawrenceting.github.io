@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: page
 title: ExpressCard USB on MacBook Pro Late 2008
-permalink: xxx
+permalink: index.html
 comments: true
 Date: 2014-04-25 08:41 
 ---
