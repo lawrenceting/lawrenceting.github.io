@@ -11,7 +11,7 @@ Notice how the original USB ports are blocked. You can add additionally USB port
 
 <img src="img/ExpressCard-USB.JPG"/>
 
-My MacBook Pro (late 2008) does not readily support the ExpressCard. You have to download 3rd party drivers.
+My MacBook Pro (late 2008) does not readily support an ExpressCard USB. You have to download 3rd party drivers.
 
 **Requirements:**
 
@@ -22,7 +22,7 @@ My MacBook Pro (late 2008) does not readily support the ExpressCard. You have to
 
 **Some Problems:**
 
-1. Most USB devices will work, a mouse and USB external drive have failed so far.
+1. Most USB devices will work. However, a mouse and USB external drive have failed so far.
 2. The Expresscard USB may get stuck in the MacBook Pro.
 
 To remove the Expresscard menubar icon, go to "/System/Library/CoreServices/Menu Extras" and rename "ExpressCard.menu". Restart again.
