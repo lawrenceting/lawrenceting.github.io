@@ -10,11 +10,11 @@ Install ExpressCard USB on MacBook Pro Late 2008. You can get it cheaply on ebay
 
 Notice how the USB ports at the back are blocked. The ExpressCard USB will solve this problem. Plus, the USB ports are hidden. No need to worry about an enormous USB device blocking the USB ports. 
 
-![alt text](ExpressCard-USB-Blocked "ExpressCard USB Exhausted")
+![alt text](ExpressCard-USB-Blocked.jpg "ExpressCard USB Exhausted")
 
 this is the one i use
 
-![alt text](ExpressCard-USB- "ExpressCard USB Exhausted")
+![alt text](ExpressCard-USB.jpg "ExpressCard USB Exhausted")
 
 http://www.ebay.com.au/itm/2-Port-Hidden-Inside-USB-3-0-to-ExpressCard-Express-Card-34-34mm-Adapter-NEC-5G-/180884695143?
 
