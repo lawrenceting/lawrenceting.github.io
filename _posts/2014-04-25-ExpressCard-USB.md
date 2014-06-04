@@ -7,9 +7,9 @@ Date: 2014-04-25 08:41
 
 Notice how the original USB ports are blocked. You can add additionally USB ports with an ExpressCard USB. You can get one cheaply on eBay or Amazon at around $10.
 
-<img src="_post/img/ExpressCard-USB-Blocked.jpg"/>
+<img src="img/ExpressCard-USB-Blocked.jpg"/>
 
-<img src="_post/img/ExpressCard-USB.JPG"/>
+<img src="img/ExpressCard-USB.JPG"/>
 
 My MacBook Pro (Late 2008) does not readily support the ExpressCard USB. You have to download 3rd party drivers.
 
