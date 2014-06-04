@@ -6,13 +6,13 @@ comments: true
 Date: 2014-04-25 08:41 
 ---
 
-Notice how the original USB ports are blocked. An ExpressCard USB will solve the problem. You can get one cheaply on eBay or Amazon at around $10. No need to worry about an enormous USB device blocking the USB ports again. 
+Notice how the original USB ports are blocked. Add additionally USB ports with an ExpressCard USB. You can get one cheaply on eBay or Amazon at around $10.
 
 ![alt text](ExpressCard-USB-Blocked.jpg "ExpressCard USB Exhausted")
 
 ![alt text](ExpressCard-USB.jpg "ExpressCard USB Exhausted")
 
-My MacBook Pro does not readily support the ExpressCard. You must download 3rd party drivers.
+My MacBook Pro (late 2008) does not readily support the ExpressCard. You have to download 3rd party drivers.
 
 **Requirements:**
 
