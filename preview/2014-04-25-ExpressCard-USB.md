@@ -6,7 +6,7 @@ comments: true
 Date: 2014-04-25 08:41 
 ---
 
-Notice how the original USB ports are blocked. Add additionally USB ports with an ExpressCard USB. You can get one cheaply on eBay or Amazon at around $10.
+Notice how the original USB ports are blocked. You can add additionally USB ports with an ExpressCard USB. You can get one cheaply on eBay or Amazon at around $10.
 
 ![alt text](ExpressCard-USB-Blocked.jpg "ExpressCard USB Exhausted")
 
