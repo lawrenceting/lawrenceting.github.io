@@ -8,23 +8,24 @@ Date: 2014-04-25 08:41
 
 Install ExpressCard USB on MacBook Pro Late 2008. You can get it cheaply on ebay or amazon at around $10. 
 
-Notice how the USB port at the back are blocked. The ExpressCard USB will solve this problem. Plus, the USB ports are hidden. No need to worry about an enormous USB device blocking the USB ports. 
+Notice how the USB ports at the back are blocked. The ExpressCard USB will solve this problem. Plus, the USB ports are hidden. No need to worry about an enormous USB device blocking the USB ports. 
 
-![alt text](http://terrywhite.com/wp-content/uploads/2009/04/usbadapter_0013.jpg "Logo Title Text 1")
+![alt text](ExpressCard-USB-Blocked "ExpressCard USB Exhausted")
 
 this is the one i use
 
-![alt text](http://i.ebayimg.com/00/s/NzUzWDcwMA==/z/rOEAAOxyMxpRpKZR/$T2eC16ZHJGUFFi!7YKScBRpKZRWM6Q~~60_3.JPG "Logo Title Text 1")
+![alt text](ExpressCard-USB- "ExpressCard USB Exhausted")
 
 http://www.ebay.com.au/itm/2-Port-Hidden-Inside-USB-3-0-to-ExpressCard-Express-Card-34-34mm-Adapter-NEC-5G-/180884695143?
 
-The mbp does not readily support the expresscard. Must download 3rd party drivers.
+MacBook Pro does not readily support the ExpressCard. You must download 3rd party drivers.
 
 **Requirements:**
-* Expresscard with `uPD720202` Chipset
-* Download the driver http://sourceforge.net/projects/genericusbxhci/files/latest/download
-* Download Kext Utility from http://cvad-mac.narod.ru/index/0-4
-* install the driver and restart
+
+1. Expresscard with `uPD720202` Chipset
+2. Download the driver http://sourceforge.net/projects/genericusbxhci/files/latest/download
+3. Download Kext Utility from http://cvad-mac.narod.ru/index/0-4
+4. install the driver and restart
 
 **Some Problems:**
 * Most usb devices will work, a mouse and usb external drive have failed so far.
