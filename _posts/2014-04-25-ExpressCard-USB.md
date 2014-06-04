@@ -25,6 +25,6 @@ My MacBook Pro (Late 2008) does not readily support the ExpressCard USB. You hav
 1. Most USB devices will work. However, a mouse and USB external drive have failed so far.
 2. The Expresscard USB may get stuck in the MacBook Pro.
 
-To remove the Expresscard menubar icon, go to "/System/Library/CoreServices/Menu Extras" and rename "ExpressCard.menu". Restart again.
+To remove the Expresscard menubar icon, go to `/System/Library/CoreServices/Menu Extras` and rename "ExpressCard.menu". Restart again.
 
 More help/info can be found at <a href="http://www.insanelymac.com/forum/topic/286860-genericusbxhci-usb-30-driver-for-os-x-with-source" target="_blank">insanelymac.com</a> 
