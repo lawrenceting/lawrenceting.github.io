@@ -10,7 +10,7 @@ Notice how the original USB ports are blocked. You can add additionally USB port
 
 <img src="ExpressCard-USB-Blocked.jpg"/>
 
-<img src="http://i.ebayimg.com/00/s/NzUzWDcwMA==/z/rOEAAOxyMxpRpKZR/$T2eC16ZHJGUFFi!7YKScBRpKZRWM6Q~~60_3.JPG"/>
+<img src="ExpressCard-USB-Blocked.jpg"/>
 
 My MacBook Pro (late 2008) does not readily support the ExpressCard. You have to download 3rd party drivers.
 
