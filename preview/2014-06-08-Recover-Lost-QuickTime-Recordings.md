@@ -8,7 +8,7 @@ Date: 2014-06-08 07:00
 
 *Step 1*
 
-Reopen QuickTime Player. Your recording might still be avilable as an unsaved file. If step 1 does not work, go to step 2. 
+Reopen QuickTime Player. Your recording might still be avilable as an unsaved file. If step 1 fails, go to step 2. 
 
 *Step 2*
 
