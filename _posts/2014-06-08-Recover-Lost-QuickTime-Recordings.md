@@ -1,7 +1,6 @@
 ---
 title: Recover Lost QuickTime Recordings
 comments: true
-permalink: index.html
 layout: post
 Date: 2014-06-08 07:00
 ---
@@ -17,4 +16,4 @@ Reopen QuickTime Player. Your recording might still be avilable as an unsaved fi
 3. You should be able to see a file named `Unsaved QuickTime Player Document.qtpxcomposition` > Right Click > Show Package Contents
 4. The unsaved recording will be named `Audio Recording.m4a`
 
-<img src="QuickTime-Lost-Recording">
+<img src="img/QuickTime-Lost-Recording.jpg">
