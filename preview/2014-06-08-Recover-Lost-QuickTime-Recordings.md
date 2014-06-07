@@ -1,6 +1,7 @@
 ---
 title: Recover Lost QuickTime Recordings
 comments: true
+permalink: index.html
 layout: post
 Date: 2014-06-08 07:00
 ---
