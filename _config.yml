@@ -1,24 +1,12 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
-
-# Permalinks
-permalink:        pretty
-
-# Setup
-title:            Lawrence Ting
-tagline:          'Learning to Code…'
-description:      'Learning to Code…'
-url:              //lawrenceting.tk
-
+title:        Hyde
+tagline:      'Hyde, a Jekyll theme'
+description:  'An elegant open source and mobile first theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:          http://andhyde.com
+version:      1.1.1
 author:
-  name:           'Lawrence Ting'
-  url:            https://twitter.com/mdo
-
-paginate:         5
-
-# Custom vars
-version:          2.0.0
-
-github:
-  repo:           https://github.com/lawrenceting/lawrenceting.github.io
+  name:       ''
+  email:      ''
+markdown:     rdiscount
+permalink:    pretty
+pygments:     true
+paginate:     5
