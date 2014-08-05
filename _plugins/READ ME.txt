@@ -1,0 +1,2 @@
+plugins do not work on github pages
+must compile in HTML locally, then upload to github
