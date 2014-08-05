@@ -5,7 +5,7 @@ comments: true
 Date: 2014-04-25 08:41 
 ---
 
-Notice how the original USB ports are all used up. You can add more  USB ports with an ExpressCard USB. You can get it cheaply on <a href="http://www.ebay.ca/itm/2-Port-Hidden-Inside-USB-3-0-to-ExpressCard-Express-Card-34-34mm-Adapter-NEC-5G-/180884695143" target="_blank">eBay</a> or Amazon for around $10.
+Notice how the original USB ports are all used up. You can add USB ports with an ExpressCard USB. You can get it cheaply on <a href="http://www.ebay.ca/itm/2-Port-Hidden-Inside-USB-3-0-to-ExpressCard-Express-Card-34-34mm-Adapter-NEC-5G-/180884695143" target="_blank">eBay</a> or Amazon for around $10.
 
 <img src="img/ExpressCard-USB-Blocked.jpg"/>
 
