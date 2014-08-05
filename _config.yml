@@ -1,22 +1,24 @@
 # Dependencies
 markdown:         redcarpet
-pygments:         true
+highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
 
 # Setup
-title:            Poole
-tagline:          The Jekyll Butler
-url:              http://getpoole.com
-paginate:         1
-baseurl:          /
+title:            Lawrence Ting
+tagline:          'Learning to Code…'
+description:      'Learning to Code…'
+url:              //lawrenceting.tk
+
 author:
-  name:           Mark Otto
+  name:           'Lawrence Ting'
   url:            https://twitter.com/mdo
-  email:          markdotto@gmail.com
+
+paginate:         5
 
 # Custom vars
-version:          1.0.0
+version:          2.0.0
+
 github:
-  repo:           https://github.com/poole/poole
+  repo:           https://github.com/lawrenceting/lawrenceting.github.io
