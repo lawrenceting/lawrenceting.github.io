@@ -1,7 +1,9 @@
 ---
-layout: default
+layout: page
 title: Private
-published: true
+Date: 2014-05-01 17:00
+Type: page
+Published: true
 ---
 
 <a href="https://www.dropbox.com/sh/63t2abo4a7q48ac/AADoQWnsrbFxV6GrqtzosRLXa" target="_blank">Link</a>
