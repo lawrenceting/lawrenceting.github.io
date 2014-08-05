@@ -1,0 +1,24 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Lawrence Ting
+tagline:          'Learning to Code…'
+description:      'Learning to Code…'
+url:              //lawrenceting.tk
+
+author:
+  name:           'Lawrence Ting'
+  url:            https://twitter.com/mdo
+
+paginate:         5
+
+# Custom vars
+version:          2.0.0
+
+github:
+  repo:           https://github.com/lawrenceting/lawrenceting.github.io
