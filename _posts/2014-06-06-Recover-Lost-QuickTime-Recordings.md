@@ -15,4 +15,4 @@ Reopen QuickTime Player. Your recording might still be avilable as an unsaved fi
 3. You should be able to see a file named `Unsaved QuickTime Player Document.qtpxcomposition` > Right Click > Show Package Contents
 4. The unsaved recording will be named `Audio Recording.m4a`
 
-<img src="{{ site.url }}/img/QuickTime-Lost-Recording.jpg">
+<img src="{{ site.url }}/img/2014-06-06-QuickTime-Lost-Recording">
