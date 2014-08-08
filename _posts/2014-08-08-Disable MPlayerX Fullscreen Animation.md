@@ -4,7 +4,7 @@ comments: true
 layout: post
 Date: 2014-08-08
 ---
-```Shell
+```ruby
 cd ~/Library/Preferences
 defaults write org.niltsh.MPlayerX OldFullScreenMethod YES
 ```
