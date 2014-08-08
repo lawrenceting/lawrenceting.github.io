@@ -5,10 +5,8 @@ layout: post
 Date: 2014-08-08
 ---
 
-{% highlight shell %}
+{% highlight bash %}
 cd ~/Library/Preferences
+
+defaults write org.niltsh.MPlayerX OldFullScreenMethod YES
 {% endhighlight %}
-
-
-
-`defaults write org.niltsh.MPlayerX OldFullScreenMethod YES`
