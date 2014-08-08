@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Corporate Gatekeepers - Padlet
-published: false
+published: true
 ---
 
 <a href="https://padlet.com/suzanne_lemire/g3qf3ife1gwx">Link</a>
