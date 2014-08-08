@@ -6,8 +6,6 @@ Date: 2014-04-26 17:00
 Type: page
 Published: true
 ---
-
-
 <script type="text/javascript">
 	$(document).ready(function(){
 
