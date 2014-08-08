@@ -2,7 +2,7 @@
 title: Turn App Nap Off (Script)
 comments: true
 layout: post
-redirect_from: "/turn-app-nap-off-script"
+redirect_from: "/turn-app-nap-off-script/"
 Date: 2014-03-10 07:00
 Tags: Automator, AppleScript
 ---
