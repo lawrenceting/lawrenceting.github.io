@@ -10,7 +10,8 @@ Published: true
 
 A repository of Automator Workflows that I use to improve my workflow. If any of the links are broken, <a href="#disqus_thread">comment below</a> and I'll try to reupload a working link as soon as possible.
 
-<a href="{{ site.github.repo }}/Automator-Services/archive/master.zip" target="_blank">Click here to download all.</a>
+<a href="{{ site.github.repo }}/Automator-Services/archive/master.zip" target="_blank">Click here to download all</a>
+<hr>
 
 Text
 ----------------------

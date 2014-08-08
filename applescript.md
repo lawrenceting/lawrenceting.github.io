@@ -7,7 +7,9 @@ Date: 2013-01-24 17:00
 Type: page
 Published: true
 ---
-A repository of AppleScript(s) / Shell Scripts that I use to improve my workflow. If any of the links are broken, comment below and I'll try to reupload a working link as soon as possible.[^0]
+A repository of AppleScript(s) / Shell Scripts that I use to improve my workflow. If any of the links are broken, <a href="#disqus_thread">comment below</a> and I'll try to reupload a working link as soon as possible.
+
+<a href="{{ site.github.repo }}/AppleScript-Snippets/archive/master.zip" target="_blank">Click here to download all</a>
 <hr>
 
 <h3><div id="Application : Proces">Application / Proces</div></h3>
@@ -199,5 +201,3 @@ A repository of AppleScript(s) / Shell Scripts that I use to improve my workflow
 	Use Property in lieu of Variables - Fast Script.scpt
 	Write Log.scpt
 <a href="https://www.dropbox.com/sh/iffvtwx0275cj9w/9FOluYpA8q" target="_blank">Download</a>
-
-[^0]: Go Back to Top
