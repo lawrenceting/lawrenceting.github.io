@@ -5,7 +5,7 @@ layout: post
 Date: 2014-08-08
 ---
 
-{% highlight ruby linenos %}
+{% highlight shell %}
 cd ~/Library/Preferences
 {% endhighlight %}
 
