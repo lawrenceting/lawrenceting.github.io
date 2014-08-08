@@ -8,7 +8,9 @@ Type: page
 Published: true
 ---
 
-A repository of Automator Workflows that I use to improve my workflow. If any of the links are broken, comment below and I'll try to reupload a working link as soon as possible.[^0]
+A repository of Automator Workflows that I use to improve my workflow. If any of the links are broken, <a href="#disqus_thread">comment below</a> and I'll try to reupload a working link as soon as possible.
+
+<a href="{{ site.github.repo }}/Automator-Services/archive/master.zip" target="_blank">Click here to download all.</a>
 
 Text
 ----------------------
@@ -99,5 +101,3 @@ Development
     Open with Automator.workflow
     Turn ON | OFF App Nap.workflow
 <a href="https://www.dropbox.com/sh/t4ngev0z3rcdkml/8ipXsclFfl" target="_blank">Download</a>
-
-[^0]: Go Back to Top
