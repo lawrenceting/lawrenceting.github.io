@@ -1,6 +1,7 @@
 ---
 layout: page
 title: AppleScript
+redirect_from: "/applescript-others/"
 tags: AppleScript
 Slug: applescript
 Date: 2013-01-24 17:00
