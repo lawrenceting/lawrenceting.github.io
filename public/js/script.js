@@ -1,8 +1,10 @@
+/*
 $(document).ready(function(){
 	
 	sortMenu(".sidebar-nav", "a"); //Sort menu alphabetically
 
 });
+*/
 
 function sortMenu(selector, theChild) {
     $(selector).children(theChild).sort(function(a, b) {
