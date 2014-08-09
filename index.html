@@ -1,37 +1,234 @@
----
-layout: default
-title: Home
----
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
-<div class="posts">
-  {% for post in paginator.posts %}
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Lawrence Ting &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <!--
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  -->
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- Scripts -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script async src="//lawrenceting.tk/public/js/google_analytics.js"></script>
+  <script async src="//lawrenceting.tk/public/js/script.js"></script>
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          Lawrence Ting
+        </a>
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+<!--
+      <a class="sidebar-nav-item active" href="/">Home</a>
+-->
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/applescript/">AppleScript</a>
+          
+        
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/automator-workflows/">Automator Workflows</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/contact/">Contact</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/donate/">Donate</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/stylish-user-styles/">User Styles</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+<!--
+      <a class="sidebar-nav-item" href="//github.com/lawrenceting/archive/v2.1.0.zip">Download</a>
+-->
+      <a class="sidebar-nav-item" href="//github.com/lawrenceting" target="_blank">GitHub project</a>
+<!--
+      <span class="sidebar-nav-item">Currently v2.1.0</span>
+-->
+    </nav>
+
+    <p>&copy; 2014. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="posts">
+  
   <div class="post">
     <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
+      <a href="/2014/08/09/Script-for-iTunes-Open-Selected-in-VLC/">
+        Script for iTunes - Open Selected in VLC
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <span class="post-date">09 Aug 2014</span>
 
-    {{ post.content }}
+    <p><a href="//github.com/lawrenceting/Script-for-iTunes---Open-Selected-in-VLC/archive/master.zip" target="_blank">Download script.</a></p>
+
+<p><img src="//lawrenceting.tk/img/2014-08-09-Screen Shot 2014-08-09 at 6.29.14 am.jpg"></p>
+
   </div>
-  {% endfor %}
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2014/08/08/Disable%20MPlayerX%20Fullscreen%20Animation/">
+        Disable MPlayerX Fullscreen Animation
+      </a>
+    </h1>
+
+    <span class="post-date">08 Aug 2014</span>
+
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/Library/Preferences
+
+defaults write org.niltsh.MPlayerX OldFullScreenMethod YES
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2014/07/30/Uninstall-X11-and-Xrquartz-on-Mavericks/">
+        Uninstall X11 and Xrquartz on Mavericks
+      </a>
+    </h1>
+
+    <span class="post-date">30 Jul 2014</span>
+
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo rm -rf /etc/X11 /usr/X11R6 /Applications/Utilities/X11.app
+
+sudo rm -rf /usr/X11* /System/Library/Launch*/org.x.* /Applications/Utilities/X11.app /etc/*paths.d/X11
+
+sudo rm -rf /opt/X11* /Library/Launch*/org.macosforge.xquartz.* /Applications/Utilities/XQuartz.app /etc/*paths.d/*XQuartz
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2014/06/08/Fix-Frozen-GPS-Garmin-nuvi-1390/">
+        Fix Frozen GPS Garmin nuvi 1390
+      </a>
+    </h1>
+
+    <span class="post-date">08 Jun 2014</span>
+
+    <p>This fix should work on Garmin nuvi 13xx and 14xx models</p>
+
+<p><a href="//mega.co.nz/#!21AHWZgb!A1JDJ1uldRoz1UV-44DxmteWaF81l1WQIVQh9SXvZp8" target="_blank">Download zip file</a>, follow the instructons.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2014/06/06/Recover-Lost-QuickTime-Recordings/">
+        Recover Lost QuickTime Recordings
+      </a>
+    </h1>
+
+    <span class="post-date">06 Jun 2014</span>
+
+    <p><em>Step 1</em></p>
+
+<p>Reopen QuickTime Player. Your recording might still be avilable as an unsaved file. If step 1 fails, go to step 2. </p>
+
+<p><em>Step 2</em></p>
+
+<ol>
+<li>Go to <code>~/Library/Containers/com.apple.QuickTimePlayerX/Data/Library/Autosave Information</code></li>
+<li>You should be able to see a file named <code>Unsaved QuickTime Player Document.qtpxcomposition</code> &gt; Right Click &gt; Show Package Contents</li>
+<li>The unsaved recording will be named <code>Audio Recording.m4a</code></li>
+</ol>
+
+<p><img src="//lawrenceting.tk/img/2014-06-06-QuickTime-Lost-Recording.jpg"></p>
+
+  </div>
+  
 </div>
 
 <div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
+  
+    <a class="pagination-item older" href="/page2">Older</a>
+  
+  
     <span class="pagination-item newer">Newer</span>
-  {% endif %}
+  
 </div>
+    </div>
+
+  </body>
+</html>

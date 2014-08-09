@@ -11,7 +11,7 @@
 
   <title>
     
-      404: Page not found &middot; Lawrence Ting
+      User Styles &middot; Lawrence Ting
     
   </title>
 
@@ -102,7 +102,7 @@
       
         
           
-            <a class="sidebar-nav-item" href="/stylish-user-styles/">User Styles</a>
+            <a class="sidebar-nav-item active" href="/stylish-user-styles/">User Styles</a>
           
         
       
@@ -129,18 +129,70 @@
 
 
     <div class="content container">
-      <meta http-equiv="refresh" content="5; url=/" />
+      <div class="page">
+  <h1 class="page-title">User Styles</h1>
+  <div id="userstyles-container">
 
-<div class="page">
-  <h1 class="page-title">404: Page not found</h1>
-  
-  <p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href="/">Head back home</a> to try finding it again.</p>
+    <script type="text/javascript" src="//lawrenceting.tk/public/js/User Styles/v1.js"></script>
+    
+    <script type="text/javascript">
 
-  <p class="lead">Redirecting in 5 seconds ...</p>
+        if (window.addEventListener)
+            window.addEventListener("load", userstylesLoad, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", userstylesLoad);
+        
+        function userstylesLoad() {
+            var c = document.getElementById("userstyles-container");
+            var s1 = document.createElement("script");
+            s1.setAttribute("async", "true");
+            var s2 = s1.cloneNode(false);
 
-  <a href="/">Click here if you are not redirected.</a>
+            s1.src = userstyles; /* value obtain from external js file*/
+                    /* https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/widgets/v1.js */
+                                    /* backup in js folder */
+            c.appendChild(s1);
+
+            s2.src = "//userstyles.org/users/263946.jsonp?callback=userstyles.handleData"; 
+                    /* http://widget.userstyles.org/users/263946.jsonp?callback=userstyles.handleData */ 
+                                    /* backup in js folder */
+            c.appendChild(s2); 
+        }
+    </script>
+
+    <noscript>
+        Check out <a href="http://userstyles.org/users/263946">My User Styles</a>
+    </noscript>
 </div>
 
+<p><br><br></p>
+
+  <hr>
+  <!-- Social -->
+    <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+  <a class="addthis_button_preferred_1"></a>
+  <a class="addthis_button_preferred_2"></a>
+  <a class="addthis_button_preferred_3"></a>
+  <a class="addthis_button_preferred_4"></a>
+  <a class="addthis_button_compact"></a>
+  <a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=szesam"></script>
+
+  <p></p>
+
+  <!-- Disqus Comment -->
+    
+
+	<div id="disqus_thread"></div>
+	<script async src="//lawrenceting.tk/public/js/disqus.js"></script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</div>
 
     </div>
 
