@@ -1,0 +1,29 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Lawrence Ting
+tagline:          ''
+description:      ''
+url:              //lawrenceting.tk
+baseurl:          /
+
+author:
+  name:           'Lawrence Ting'
+  url:            //lawrenceting.github.io
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           //github.com/lawrenceting
+
+gems:
+- jekyll-redirect-from
+- jekyll-sitemap
