@@ -11,7 +11,7 @@
 
   <title>
     
-      Test &middot; Lawrence Ting
+      Private &middot; Lawrence Ting
     
   </title>
 
@@ -32,8 +32,8 @@
 
   <!-- Scripts -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script async src="//lawrenceting.tk/public/js/google_analytics.js"></script>
-  <script async src="//lawrenceting.tk/public/js/script.js"></script>
+  <script async src="//lawrenceting.github.io/public/js/google_analytics.js"></script>
+  <script async src="//lawrenceting.github.io/public/js/script.js"></script>
 </head>
 
 
@@ -57,6 +57,10 @@
       
 
       
+      
+        
+          
+        
       
         
           
@@ -118,6 +122,18 @@
       
         
           
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
             <a class="sidebar-nav-item" href="/stylish-user-styles/">User Styles</a>
           
         
@@ -140,6 +156,8 @@
       <a class="sidebar-nav-item" href="//github.com/lawrenceting/archive/v2.1.0.zip">Download</a>
 -->
       <a class="sidebar-nav-item" href="//github.com/lawrenceting" target="_blank">GitHub project</a>
+
+      <a class="sidebar-nav-item" href="//lawrenceting.github.io/atom.xml" target="_blank">RSS</a>
 <!--
       <span class="sidebar-nav-item">Currently v2.1.0</span>
 -->
@@ -151,12 +169,33 @@
 
 
     <div class="content container">
-      
-  <a href="/private/gallery.md" >gallery.md</a> <br> 
+      <div class="page">
+  <h1 class="page-title">Private</h1>
+  
 
-  <a href="/private/gatekeepers.md" >gatekeepers.md</a> <br> 
 
-  <a href="/private/print.md" >print.md</a>
+	<ul>
+		<li>
+  			<a href="/Private/gatekeepers.md" class="directory_list">gatekeepers.md</a> <br> 
+  		</li>
+	</ul>
+
+	<ul>
+		<li>
+  			<a href="/Private/print.md" class="directory_list">print.md</a>
+  		</li>
+	</ul>
+
+
+
+<script>
+	$(document).ready(function(){
+	    $('ul > li > a.directory_list').each(function(){
+	        this.href = this.href.replace('.md', '/');
+	    });
+	});
+</script>
+</div>
 
     </div>
 

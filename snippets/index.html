@@ -11,7 +11,7 @@
 
   <title>
     
-      Test &middot; Lawrence Ting
+      Snippets &middot; Lawrence Ting
     
   </title>
 
@@ -32,8 +32,8 @@
 
   <!-- Scripts -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script async src="//lawrenceting.tk/public/js/google_analytics.js"></script>
-  <script async src="//lawrenceting.tk/public/js/script.js"></script>
+  <script async src="//lawrenceting.github.io/public/js/google_analytics.js"></script>
+  <script async src="//lawrenceting.github.io/public/js/script.js"></script>
 </head>
 
 
@@ -57,6 +57,10 @@
       
 
       
+      
+        
+          
+        
       
         
           
@@ -118,6 +122,18 @@
       
         
           
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
             <a class="sidebar-nav-item" href="/stylish-user-styles/">User Styles</a>
           
         
@@ -140,6 +156,8 @@
       <a class="sidebar-nav-item" href="//github.com/lawrenceting/archive/v2.1.0.zip">Download</a>
 -->
       <a class="sidebar-nav-item" href="//github.com/lawrenceting" target="_blank">GitHub project</a>
+
+      <a class="sidebar-nav-item" href="//lawrenceting.github.io/atom.xml" target="_blank">RSS</a>
 <!--
       <span class="sidebar-nav-item">Currently v2.1.0</span>
 -->
@@ -151,33 +169,42 @@
 
 
     <div class="content container">
-      <ul>
+      <div class="page">
+  <h1 class="page-title">Snippets</h1>
   
-    <li>
-      <img src="/img/2014-04-25-ExpressCard-USB-Blocked.jpg"
-           alt="2014-04-25-ExpressCard-USB-Blocked.jpg"
-           datetime="2014-04-25T00:00:00+09:30" />
-    </li>
-  
-    <li>
-      <img src="/img/2014-04-25-ExpressCard-USB.JPG"
-           alt="2014-04-25-ExpressCard-USB.JPG"
-           datetime="2014-04-25T00:00:00+09:30" />
-    </li>
-  
-    <li>
-      <img src="/img/2014-06-06-QuickTime-Lost-Recording.jpg"
-           alt="2014-06-06-QuickTime-Lost-Recording.jpg"
-           datetime="2014-06-06T00:00:00+09:30" />
-    </li>
-  
-    <li>
-      <img src="/img/2014-08-09-Screen Shot 2014-08-09 at 6.29.14 am.jpg"
-           alt="2014-08-09-Screen Shot 2014-08-09 at 6.29.14 am.jpg"
-           datetime="2014-08-09T00:00:00+09:30" />
-    </li>
-  
-</ul>
+	<ul>
+		<li>
+  			<a href="/snippets/@somebody link to github page.md" class="directory_list">@somebody link to github page.md</a> <br> 
+  		</li>
+	</ul>
+
+	<ul>
+		<li>
+  			<a href="/snippets/embed youtube.md" class="directory_list">embed youtube.md</a> <br> 
+  		</li>
+	</ul>
+
+	<ul>
+		<li>
+  			<a href="/snippets/emoji.md" class="directory_list">emoji.md</a> <br> 
+  		</li>
+	</ul>
+
+	<ul>
+		<li>
+  			<a href="/snippets/list files in directory.md" class="directory_list">list files in directory.md</a>
+  		</li>
+	</ul>
+
+
+<script>
+	$(document).ready(function(){
+	    $('ul > li > a.directory_list').each(function(){
+	        this.href = this.href.replace('.md', '/');
+	    });
+	});
+</script>
+</div>
 
     </div>
 
