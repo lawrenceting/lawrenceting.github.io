@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         redcarpet
-pygments:         true
+highlighter:      'pygments'
 
 # Permalinks
 permalink:        pretty
@@ -25,7 +25,5 @@ github:
   repo:           //github.com/lawrenceting
 
 gems:
-- jekyll-mentions
-- jemoji
 - jekyll-redirect-from
 - jekyll-sitemap
