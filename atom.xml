@@ -1,28 +1,152 @@
----
-layout: nil
----
-
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>{{ site.title }}</title>
- <link href="{{ site.url }}/atom.xml" rel="self"/>
- <link href="{{ site.url }}/"/>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{ site.url }}</id>
+ <title>Lawrence Ting</title>
+ <link href="//lawrenceting.tk/atom.xml" rel="self"/>
+ <link href="//lawrenceting.tk/"/>
+ <updated>2014-08-09T19:51:52+09:30</updated>
+ <id>//lawrenceting.tk</id>
  <author>
-   <name>{{ site.author.name }}</name>
-   <email>{{ site.author.email }}</email>
+   <name>Lawrence Ting</name>
+   <email></email>
  </author>
 
- {% for post in site.posts %}
+ 
  <entry>
-   <title>{{ post.title }}</title>
-   <link href="{{ site.url }}{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{ site.url }}{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
+   <title>Script for iTunes - Open Selected in VLC</title>
+   <link href="//lawrenceting.tk/2014/08/09/Script-for-iTunes-Open-Selected-in-VLC/"/>
+   <updated>2014-08-09T00:00:00+09:30</updated>
+   <id>//lawrenceting.tk/2014/08/09/Script-for-iTunes-Open-Selected-in-VLC</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;//github.com/lawrenceting/Script-for-iTunes---Open-Selected-in-VLC/archive/master.zip&quot; target=&quot;_blank&quot;&gt;Download script.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;//lawrenceting.tk/img/2014-08-09-Screen Shot 2014-08-09 at 6.29.14 am.jpg&quot;&gt;&lt;/p&gt;
+</content>
  </entry>
- {% endfor %}
+ 
+ <entry>
+   <title>Disable MPlayerX Fullscreen Animation</title>
+   <link href="//lawrenceting.tk/2014/08/08/Disable%20MPlayerX%20Fullscreen%20Animation/"/>
+   <updated>2014-08-08T00:00:00+09:30</updated>
+   <id>//lawrenceting.tk/2014/08/08/Disable MPlayerX Fullscreen Animation</id>
+   <content type="html">&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Library/Preferences
+
+defaults write org.niltsh.MPlayerX OldFullScreenMethod YES
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Uninstall X11 and Xrquartz on Mavericks</title>
+   <link href="//lawrenceting.tk/2014/07/30/Uninstall-X11-and-Xrquartz-on-Mavericks/"/>
+   <updated>2014-07-30T00:00:00+09:30</updated>
+   <id>//lawrenceting.tk/2014/07/30/Uninstall-X11-and-Xrquartz-on-Mavericks</id>
+   <content type="html">&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo rm -rf /etc/X11 /usr/X11R6 /Applications/Utilities/X11.app
+
+sudo rm -rf /usr/X11* /System/Library/Launch*/org.x.* /Applications/Utilities/X11.app /etc/*paths.d/X11
+
+sudo rm -rf /opt/X11* /Library/Launch*/org.macosforge.xquartz.* /Applications/Utilities/XQuartz.app /etc/*paths.d/*XQuartz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Fix Frozen GPS Garmin nuvi 1390</title>
+   <link href="//lawrenceting.tk/2014/06/08/Fix-Frozen-GPS-Garmin-nuvi-1390/"/>
+   <updated>2014-06-08T00:00:00+09:30</updated>
+   <id>//lawrenceting.tk/2014/06/08/Fix-Frozen-GPS-Garmin-nuvi-1390</id>
+   <content type="html">&lt;p&gt;This fix should work on Garmin nuvi 13xx and 14xx models&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;//mega.co.nz/#!21AHWZgb!A1JDJ1uldRoz1UV-44DxmteWaF81l1WQIVQh9SXvZp8&quot; target=&quot;_blank&quot;&gt;Download zip file&lt;/a&gt;, follow the instructons.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Recover Lost QuickTime Recordings</title>
+   <link href="//lawrenceting.tk/2014/06/06/Recover-Lost-QuickTime-Recordings/"/>
+   <updated>2014-06-06T00:00:00+09:30</updated>
+   <id>//lawrenceting.tk/2014/06/06/Recover-Lost-QuickTime-Recordings</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;Step 1&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Reopen QuickTime Player. Your recording might still be avilable as an unsaved file. If step 1 fails, go to step 2. &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Step 2&lt;/em&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Go to &lt;code&gt;~/Library/Containers/com.apple.QuickTimePlayerX/Data/Library/Autosave Information&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;You should be able to see a file named &lt;code&gt;Unsaved QuickTime Player Document.qtpxcomposition&lt;/code&gt; &amp;gt; Right Click &amp;gt; Show Package Contents&lt;/li&gt;
+&lt;li&gt;The unsaved recording will be named &lt;code&gt;Audio Recording.m4a&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;//lawrenceting.tk/img/2014-06-06-QuickTime-Lost-Recording.jpg&quot;&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ExpressCard USB on MacBook Pro Late 2008</title>
+   <link href="//lawrenceting.tk/2014/04/25/ExpressCard-USB/"/>
+   <updated>2014-04-25T00:00:00+09:30</updated>
+   <id>//lawrenceting.tk/2014/04/25/ExpressCard-USB</id>
+   <content type="html">&lt;p&gt;Notice how the original USB ports are all used up. You can add USB ports with an ExpressCard USB. You can get it cheaply on &lt;a href=&quot;//www.ebay.ca/itm/2-Port-Hidden-Inside-USB-3-0-to-ExpressCard-Express-Card-34-34mm-Adapter-NEC-5G-/180884695143&quot; target=&quot;_blank&quot;&gt;eBay&lt;/a&gt; or Amazon for around $10.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;//lawrenceting.tk/img/2014-04-25-ExpressCard-USB-Blocked.jpg&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;//lawrenceting.tk/img/2014-04-25-ExpressCard-USB.JPG&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;My MacBook Pro (Late 2008) does not readily support the ExpressCard USB. You have to download 3rd party drivers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Requirements:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Make sure you get an Expresscard USB that has a &lt;code&gt;uPD720202&lt;/code&gt; Chipset.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;//sourceforge.net/projects/genericusbxhci/files/latest/download&quot; target=&quot;_blank&quot;&gt;Download&lt;/a&gt; the driver by zenith432 &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;//cvad-mac.narod.ru/index/0-4&quot; target=&quot;_blank&quot;&gt;Download&lt;/a&gt; Kext Utility.&lt;/li&gt;
+&lt;li&gt;Install the driver using Kext Utility and restart.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Some Problems:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Most USB devices will work. However, a mouse and USB external drive have failed so far.&lt;/li&gt;
+&lt;li&gt;The Expresscard USB may get stuck in the MacBook Pro.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;To remove the Expresscard menubar icon, go to &lt;code&gt;/System/Library/CoreServices/Menu Extras&lt;/code&gt; and rename &amp;quot;ExpressCard.menu&amp;quot;. Restart again.&lt;/p&gt;
+
+&lt;p&gt;More help/info can be found at &lt;a href=&quot;//www.insanelymac.com/forum/topic/286860-genericusbxhci-usb-30-driver-for-os-x-with-source&quot; target=&quot;_blank&quot;&gt;insanelymac.com&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Chinese Word of the Day Geeklet</title>
+   <link href="//lawrenceting.tk/2014/04/22/Chinese-Word-of-the-Day-Geeklet/"/>
+   <updated>2014-04-22T00:00:00+09:30</updated>
+   <id>//lawrenceting.tk/2014/04/22/Chinese-Word-of-the-Day-Geeklet</id>
+   <content type="html">&lt;p&gt;I&amp;#39;m currently relearning the Chinese language. Most of the &amp;quot;word of the day&amp;quot; geeklets are in English. I decided to create a Chinsese word of the day geeklet. The chinese words are translated into English. There are 6 levels to choose from, 1 = easy, 6 = hard. You may modify the geeklet to suit your needs. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;//github.com/lawrenceting/Chinese-Word-of-the-Day---Geeklet/archive/master.zip&quot; target=&quot;_blank&quot;&gt;Chinese Word of the Day – PinYin Above&lt;/p&gt;
+
+&lt;p&gt;Chinese Word of the Day – PinYin Below&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Turn App Nap Off (Script)</title>
+   <link href="//lawrenceting.tk/2014/03/10/Turn-App-Nap-Off-Script/"/>
+   <updated>2014-03-10T00:00:00+10:30</updated>
+   <id>//lawrenceting.tk/2014/03/10/Turn-App-Nap-Off-Script</id>
+   <content type="html">&lt;p&gt;Since there’s no way to turn app nap off universally, I’ve created a script that turns on/off app nap for applications in the Applications folder (including apps in subfolders).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How To Use&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;System requirements: &lt;code&gt;OSX Mavericks&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.dropbox.com/s/c1xfepbdz1fdqaw/Turn%20ON%20%7C%20OFF%20App%20Nap.workflow.zip&quot; target=&quot;_blank&quot;&gt;Download&lt;/a&gt; the zip file and extract it.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Double click the Automator workflow &amp;gt; click “Install” &amp;gt; click “Done”.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Run the service from Finder.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alternatively, you can just open the workflow in Automator and run it from there.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Note: Use this at your own risk.&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
+ 
 
 </feed>
