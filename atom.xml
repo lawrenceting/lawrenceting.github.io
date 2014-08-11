@@ -4,7 +4,7 @@
  <title>Lawrence Ting</title>
  <link href="//lawrenceting.github.io/atom.xml" rel="self"/>
  <link href="//lawrenceting.github.io/"/>
- <updated>2014-08-10T21:34:11+09:30</updated>
+ <updated>2014-08-11T21:46:21+09:30</updated>
  <id>//lawrenceting.github.io</id>
  <author>
    <name>Lawrence Ting</name>
@@ -17,7 +17,13 @@
    <link href="//lawrenceting.github.io/2014/08/09/Script-for-iTunes-Open-Selected-in-VLC/"/>
    <updated>2014-08-09T00:00:00+09:30</updated>
    <id>//lawrenceting.github.io/2014/08/09/Script-for-iTunes-Open-Selected-in-VLC</id>
-   <content type="html">&lt;p&gt;&lt;a href=&quot;//github.com/lawrenceting/Script-for-iTunes---Open-Selected-in-VLC/archive/master.zip&quot; target=&quot;_blank&quot;&gt;Download script.&lt;/a&gt;&lt;/p&gt;
+   <content type="html">&lt;script type=&quot;text/javascript&quot; src=&quot;//lawrenceting.github.io/public/js/jquery.githubRepoWidget.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;div style=&quot;width: auto; max-width: 600px;&quot;&gt;
+    &lt;div class=&quot;github-widget&quot; data-repo=&quot;lawrenceting/Script-for-iTunes---Open-Selected-in-VLC&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;//lawrenceting.github.io/img/2014-08-09-Screen Shot 2014-08-09 at 6.29.14 am.jpg&quot;&gt;&lt;/p&gt;
 </content>
@@ -121,9 +127,11 @@ sudo rm -rf /opt/X11* /Library/Launch*/org.macosforge.xquartz.* /Applications/Ut
    <id>//lawrenceting.github.io/2014/04/22/Chinese-Word-of-the-Day-Geeklet</id>
    <content type="html">&lt;p&gt;I&amp;#39;m currently relearning the Chinese language. Most of the &amp;quot;word of the day&amp;quot; geeklets are in English. I decided to create a Chinsese word of the day geeklet. The chinese words are translated into English. There are 6 levels to choose from, 1 = easy, 6 = hard. You may modify the geeklet to suit your needs. &lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;//github.com/lawrenceting/Chinese-Word-of-the-Day---Geeklet/archive/master.zip&quot; target=&quot;_blank&quot;&gt;Chinese Word of the Day – PinYin Above&lt;/p&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//lawrenceting.github.io/public/js/jquery.githubRepoWidget.min.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Chinese Word of the Day – PinYin Below&lt;/a&gt;&lt;/p&gt;
+&lt;div style=&quot;width: auto; max-width: 600px;&quot;&gt;
+    &lt;div class=&quot;github-widget&quot; data-repo=&quot;lawrenceting/Chinese-Word-of-the-Day---Geeklet&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
 </content>
  </entry>
  
