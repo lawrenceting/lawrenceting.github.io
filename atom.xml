@@ -4,7 +4,7 @@
  <title>Lawrence Ting</title>
  <link href="//lawrenceting.github.io/atom.xml" rel="self"/>
  <link href="//lawrenceting.github.io/"/>
- <updated>2014-08-13T00:49:07+09:30</updated>
+ <updated>2014-08-15T20:58:41+09:30</updated>
  <id>//lawrenceting.github.io</id>
  <author>
    <name>Lawrence Ting</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Script for iTunes - Open Selected in VLC</title>
-   <link href="//lawrenceting.github.io/2014/08/09/Script-for-iTunes-Open-Selected-in-VLC/"/>
+   <link href="//lawrenceting.github.io/applescript/itunes/2014/08/09/Script-for-iTunes-Open-Selected-in-VLC/"/>
    <updated>2014-08-09T00:00:00+09:30</updated>
-   <id>//lawrenceting.github.io/2014/08/09/Script-for-iTunes-Open-Selected-in-VLC</id>
+   <id>//lawrenceting.github.io/applescript/itunes/2014/08/09/Script-for-iTunes-Open-Selected-in-VLC</id>
    <content type="html">&lt;script type=&quot;text/javascript&quot; src=&quot;//lawrenceting.github.io/public/js/jquery.githubRepoWidget.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;div style=&quot;width: auto; max-width: 600px;&quot;&gt;
