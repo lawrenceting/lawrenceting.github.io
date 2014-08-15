@@ -4,13 +4,24 @@
  <title>Lawrence Ting</title>
  <link href="//lawrenceting.github.io/atom.xml" rel="self"/>
  <link href="//lawrenceting.github.io/"/>
- <updated>2014-08-15T20:58:41+09:30</updated>
+ <updated>2014-08-15T21:25:35+09:30</updated>
  <id>//lawrenceting.github.io</id>
  <author>
    <name>Lawrence Ting</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Unlock Modem Tools</title>
+   <link href="//lawrenceting.github.io/2014/08/15/Unlock-Modem-Tools/"/>
+   <updated>2014-08-15T00:00:00+09:30</updated>
+   <id>//lawrenceting.github.io/2014/08/15/Unlock-Modem-Tools</id>
+   <content type="html">&lt;p&gt;Unlock Huawei modems, and possibly others.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;//mega.co.nz/#!ehw1QAwT!5fICGxf1f0MXv-xlpj2uVSSjoj0RMMSQ-7h6AotpKJ0&quot; target=&quot;_blank&quot;&gt;Download zip file&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Script for iTunes - Open Selected in VLC</title>
