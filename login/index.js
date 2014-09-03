@@ -2,7 +2,7 @@
 
   // Retrieve your client ID from the Google APIs Console at
   // https://code.google.com/apis/console.
-  var OAUTH2_CLIENT_ID = '608400308219-4fvrerlhle0sssa2is8qi8ogvu9ibma9.apps.googleusercontent.com';
+  var OAUTH2_CLIENT_ID = '608400308219-pg0s4dr13ucs34ab2tn31rrr34loc1fs.apps.googleusercontent.com';
   var OAUTH2_SCOPES = [
     'https://www.googleapis.com/auth/yt-analytics.readonly',
     'https://www.googleapis.com/auth/youtube.readonly'
