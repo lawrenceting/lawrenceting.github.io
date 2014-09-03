@@ -1,16 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <script src="login.js" type="text/javascript"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>        
-		<script src="//google.com/jsapi"></script> 
-        <script src="//apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
-    </head>
-    <body>
-    	<div id="login-container" class="pre-auth"><a href="#" id="login-link">Login</a></div>
-
-        <pre id="response"></pre>
-        http://www.codecademy.com/en/tracks/youtube<br>
-        https://www.youtube.com/playlist?list=PLzy_0HR5P5ob-mM836SRgj9R09IPwCUGa<br>
-    </body>
+<head>
+  <title>Sample YouTube Analytics API Implementation</title>
+  <link type="text/css" rel="stylesheet" href="index.css">
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=onJSClientLoad"></script>
+</head>
+<body>
+  <div id="login-container" class="pre-auth">This application requires access to your YouTube account.
+    Please <a href="#" id="login-link">authorize</a> to continue.
+  </div>
+  <div class="post-auth">
+    <div id="message"></div>
+    <div id="chart"></div>
+    <div>Choose a Video:</div>
+    <ul id="video-list"></ul>
+  </div>
+</body>
 </html>
