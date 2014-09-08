@@ -8,20 +8,27 @@ function makeApiCall() {
       // After both client interfaces load, use the Data API to request
       // information about the authenticated user's channel.
       // Get Subscriptions (Details and Thumbnails)
-      subscriptionsList(5, '', [], [], [], [],
+      subscriptionsList(50, '', [], [], [], [],
         function(errorMessage) { console.log(errorMessage); }, 
         function(result) {
 
         var addIds = result.addIds;
-        var myChannelID = result.myChannelID;
         var addTitle = result.addTitle;
         var addThumbnails = result.addThumbnails;
         var addDescription = result.addDescription;
         var nextPageToken = result.nextPageToken;
 
         createChannelThumbnails(addThumbnails, addIds, addTitle, addDescription); 
-        createLiveEvents(addIds);
-        uploads(addIds, myChannelID);
+            //removed watched videos
+        //removeEmptyChannels(addIds);
+      }, function(result) {
+            var addIds = result.addIds;
+            createLiveEvents(addIds);
+          
+      }, function(result) {
+              var addIds = result.addIds;
+              var myChannelID = result.myChannelID;
+              uploads(addIds, myChannelID);
       });
     });
   });
@@ -62,25 +69,14 @@ function createVideoThumbnails(videoIds, videoThumbnails, currentChannelID, uplo
   }
 }
 //------------------------------------------------------------------------------
-function createLiveThumbnails(currentChannelID, LiveIds, LiveThumbnails, LiveTitle, LiveDescription) 
-{
-    for (var i = 0; i < LiveIds.length; i++) {
-      //New Link
-      var newLink = document.createElement("a");
-      newLink.href = '//youtube.com/watch?v=' + LiveIds[i];
-      document.getElementById("videoThumbnails_" + currentChannelID).appendChild(newLink);
+function removeEmptyChannels(videoIds) {
 
-      //Create video thumbnail
-      var newImg = document.createElement("img");
-      newImg.src = LiveThumbnails[i];
-      newImg.alt = LiveTitle[i] + " - " + LiveDescription[i];
-      newLink.appendChild(newImg);          
-    }
+  for (var i = 0; i < videoIds.length; i++) {
+      //'div#videoThumbnails_'
+      
+    $('div#channelContainer_' + 'UCYfdidRxbB8Qhf0Nx7ioOYw').fadeOut();
+  }
 }
-
-
-
-
 
 
 

@@ -13,7 +13,7 @@ function subscriptionsList(numSubsToRetrive,
                             channelTitle,
                             channelDescription, 
                             errorCallback,
-                            callback) 
+                            callback, callback_1, callback_2) 
 {
   //totalResults, channelIds, channelThumbnails, callback: do not change, leave value as is
   //totalSubs: number of subs to display, enter 'all' for all subs
@@ -22,7 +22,7 @@ function subscriptionsList(numSubsToRetrive,
   var request = gapi.client.youtube.subscriptions.list({
       mine: true,
       part: 'snippet',
-      maxResults: 50,
+      maxResults: 5,
       order: 'unread',
       pageToken: nextPageToken,
       fields: 'items/snippet, nextPageToken, pageInfo'
@@ -84,13 +84,19 @@ function subscriptionsList(numSubsToRetrive,
           if (typeof callback === "function") {
              callback({
                         addIds: addIds,
-                        myChannelID: (response.items[0].snippet.channelId),
                         addTitle: addTitle,
                         nextPageToken: nextPageToken,
                         addThumbnails: addThumbnails,
                         addDescription: addDescription
-                    }); 
-
+            }); 
+            callback_1({
+                addIds: addIds
+            }); 
+            callback_2({
+                addIds: addIds,
+                myChannelID: (response.items[0].snippet.channelId)
+            }); 
+              
           } else if (typeof errorCallback === "function") {
             errorCallback("The success callback function passed in wasn't a function.");
           }
@@ -114,7 +120,7 @@ function subscriptionsList(numSubsToRetrive,
                                   channelTitle,
                                   channelDescription, 
                                   errorCallback,
-                                  callback);
+                                  callback, callback_1, callback_2);
       }
   });
 }
@@ -132,13 +138,13 @@ function createChannelThumbnails(channelThumbnails, channelIds, channelTitle, ch
     //Create div for thumbnail
     var thumbnail = document.createElement("div");
     thumbnail.id = "channelThumbnail_" + channelIds[i];
-    channel.appendChild(thumbnail);
+    channel.insertBefore(thumbnail, channel.firstChild);
 
     //New Link
     //https://www.youtube.com/channel/[Channel ID]
     var newLink = document.createElement("a");
     newLink.href = '//youtube.com/channel/' + channelIds[i];
-    thumbnail.appendChild(newLink);
+    thumbnail.insertBefore(newLink, thumbnail.firstChild);
 
     //Create channel thumbnail
     var newImg = document.createElement("img");
@@ -246,7 +252,22 @@ function checkLiveEvents(channelIds,
     }
   });
 }
+//------------------------------------------------------------------------------
+function createLiveThumbnails(currentChannelID, LiveIds, LiveThumbnails, LiveTitle, LiveDescription) 
+{
+    for (var i = 0; i < LiveIds.length; i++) {
+      //New Link
+      var newLink = document.createElement("a");
+      newLink.href = '//youtube.com/watch?v=' + LiveIds[i];
+      document.getElementById("videoThumbnails_" + currentChannelID).appendChild(newLink);
 
+      //Create video thumbnail
+      var newImg = document.createElement("img");
+      newImg.src = LiveThumbnails[i];
+      newImg.alt = LiveTitle[i] + " - " + LiveDescription[i];
+      newLink.insertBefore(newImg, newLink.firstChild);          
+    }
+}
 //------------------------------------------------------------------------------
 // input: array of channelIds, type (e.g. likes, favorites, uploads, watchHistory, watchLater)
 // output: array of playlist ID 

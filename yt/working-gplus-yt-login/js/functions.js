@@ -5,6 +5,13 @@ function showResponse(response) {
     '<br>---------------------------------<br>';
 }
 //------------------------------------------------------------------------------
+function async(your_function, callback) {
+    setTimeout(function() {
+        your_function;
+        if (callback) {callback();}
+    }, 0);
+}
+//------------------------------------------------------------------------------
 // get list of subscriptions
 function subscriptionsList(numSubsToRetrive,
                             nextPageToken, 
@@ -22,7 +29,7 @@ function subscriptionsList(numSubsToRetrive,
   var request = gapi.client.youtube.subscriptions.list({
       mine: true,
       part: 'snippet',
-      maxResults: 50,
+      maxResults: 5,
       order: 'unread',
       pageToken: nextPageToken,
       fields: 'items/snippet, nextPageToken, pageInfo'
@@ -84,13 +91,12 @@ function subscriptionsList(numSubsToRetrive,
           if (typeof callback === "function") {
              callback({
                         addIds: addIds,
-                        myChannelID: (response.items[0].snippet.channelId),
                         addTitle: addTitle,
                         nextPageToken: nextPageToken,
                         addThumbnails: addThumbnails,
                         addDescription: addDescription
-                    }); 
-
+            }); 
+              
           } else if (typeof errorCallback === "function") {
             errorCallback("The success callback function passed in wasn't a function.");
           }
@@ -139,7 +145,6 @@ function createChannelThumbnails(channelThumbnails, channelIds, channelTitle, ch
     var newLink = document.createElement("a");
     newLink.href = '//youtube.com/channel/' + channelIds[i];
     thumbnail.insertBefore(newLink, thumbnail.firstChild);
-
 
     //Create channel thumbnail
     var newImg = document.createElement("img");
@@ -374,30 +379,6 @@ function getUploadedVideosID(uploadsListId, errorCallback, callback) {
         displayMessage('There are no videos in this channel.');
       }
     }
-  });
-}
-//------------------------------------------------------------------------------
-function uploads(channelIds, myChannelID) {
-  // Now that we know the channelIds of the subscriptions,
-  // we can retrieve the upload playlist for each subscriptions.
-  getPlaylistID(channelIds, [], "uploads", 0, 
-    function(errorMessage) { console.log(errorMessage); }, 
-    function(result) {
-
-    var uploadsListId = result.playlistId;
-    var currentChannelID = result.currentChannelID;
-
-    getUploadedVideosID(uploadsListId, 
-      function(errorMessage) { console.log(errorMessage); }, 
-      function(result) {
-
-        var videoIds = result.videoIds;
-        var videoThumbnails = result.videoThumbnails;
-
-        createVideoThumbnails(videoIds, videoThumbnails, currentChannelID, uploadsListId);
-    });
-      
-    //getWatchHistoryID(channelIds, channelThumbnails, uploadsListIds, myChannelID);
   });
 }
 //------------------------------------------------------------------------------

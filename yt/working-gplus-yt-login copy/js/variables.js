@@ -27,6 +27,7 @@ var scopes = [
 
   // Keeps track of the currently authenticated user's YouTube user ID.
   var channelId; //referring to my channel
+  var myChannelID;
 
   // For information about the Google Chart Tools API, see
   // https://developers.google.com/chart/interactive/docs/quick_start

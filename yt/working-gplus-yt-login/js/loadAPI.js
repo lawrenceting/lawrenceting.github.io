@@ -13,15 +13,16 @@ function makeApiCall() {
         function(result) {
 
         var addIds = result.addIds;
-        var myChannelID = result.myChannelID;
         var addTitle = result.addTitle;
         var addThumbnails = result.addThumbnails;
         var addDescription = result.addDescription;
         var nextPageToken = result.nextPageToken;
 
-        createChannelThumbnails(addThumbnails, addIds, addTitle, addDescription); 
-        uploads(addIds, myChannelID);
-        createLiveEvents(addIds);
+        async(createChannelThumbnails(addThumbnails, addIds, addTitle, addDescription), null);
+        async(createLiveEvents(addIds), null);
+        async(uploads(addIds, myChannelID), null);
+
+        //removeEmptyChannels(addIds);
       });
     });
   });
@@ -43,7 +44,31 @@ function createLiveEvents(channelIds) {
       var currentChannelID = result.currentChannelID;
 
       console.log("Creating live video thumbnail: " + currentChannelID);
-      createLiveThumbnails(currentChannelID, addIds, addThumbnails, addTitle, addDescription);
+      async(createLiveThumbnails(currentChannelID, addIds, addThumbnails, addTitle, addDescription), null);
+  });
+}
+//------------------------------------------------------------------------------
+function uploads(channelIds, myChannelID) {
+  // Now that we know the channelIds of the subscriptions,
+  // we can retrieve the upload playlist for each subscriptions.
+  getPlaylistID(channelIds, [], "uploads", 0, 
+    function(errorMessage) { console.log(errorMessage); }, 
+    function(result) {
+
+    var uploadsListId = result.playlistId;
+    var currentChannelID = result.currentChannelID;
+
+    getUploadedVideosID(uploadsListId, 
+      function(errorMessage) { console.log(errorMessage); }, 
+      function(result) {
+
+        var videoIds = result.videoIds;
+        var videoThumbnails = result.videoThumbnails;
+
+        async(createVideoThumbnails(videoIds, videoThumbnails, currentChannelID, uploadsListId), null);
+    });
+      
+    //getWatchHistoryID(channelIds, channelThumbnails, uploadsListIds, myChannelID);
   });
 }
 //------------------------------------------------------------------------------
@@ -61,8 +86,15 @@ function createVideoThumbnails(videoIds, videoThumbnails, currentChannelID, uplo
     newLink.appendChild(newImg);
   }
 }
+//------------------------------------------------------------------------------
+function removeEmptyChannels(videoIds) {
 
-
+  for (var i = 0; i < videoIds.length; i++) {
+      //'div#videoThumbnails_'
+      
+    $('div#channelContainer_' + 'UCYfdidRxbB8Qhf0Nx7ioOYw').fadeOut();
+  }
+}
 
 
 
