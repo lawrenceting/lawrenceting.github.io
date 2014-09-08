@@ -8,7 +8,7 @@ function makeApiCall() {
       // After both client interfaces load, use the Data API to request
       // information about the authenticated user's channel.
       // Get Subscriptions (Details and Thumbnails)
-      subscriptionsList(50, '', [], [], [], [],
+      subscriptionsList(5, '', [], [], [], [],
         function(errorMessage) { console.log(errorMessage); }, 
         function(result) {
 
