@@ -20,8 +20,8 @@ function makeApiCall() {
         var nextPageToken = result.nextPageToken;
 
         createChannelThumbnails(addThumbnails, addIds, addTitle, addDescription); 
-        createLiveEvents(addIds);
         uploads(addIds, myChannelID);
+        createLiveEvents(addIds);
       });
     });
   });
@@ -61,24 +61,6 @@ function createVideoThumbnails(videoIds, videoThumbnails, currentChannelID, uplo
     newLink.appendChild(newImg);
   }
 }
-//------------------------------------------------------------------------------
-function createLiveThumbnails(currentChannelID, LiveIds, LiveThumbnails, LiveTitle, LiveDescription) 
-{
-    for (var i = 0; i < LiveIds.length; i++) {
-      //New Link
-      var newLink = document.createElement("a");
-      newLink.href = '//youtube.com/watch?v=' + LiveIds[i];
-      document.getElementById("videoThumbnails_" + currentChannelID).appendChild(newLink);
-
-      //Create video thumbnail
-      var newImg = document.createElement("img");
-      newImg.src = LiveThumbnails[i];
-      newImg.alt = LiveTitle[i] + " - " + LiveDescription[i];
-      newLink.appendChild(newImg);          
-    }
-}
-
-
 
 
 

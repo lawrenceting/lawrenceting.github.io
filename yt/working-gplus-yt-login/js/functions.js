@@ -132,13 +132,14 @@ function createChannelThumbnails(channelThumbnails, channelIds, channelTitle, ch
     //Create div for thumbnail
     var thumbnail = document.createElement("div");
     thumbnail.id = "channelThumbnail_" + channelIds[i];
-    channel.appendChild(thumbnail);
+    channel.insertBefore(thumbnail, channel.firstChild);
 
     //New Link
     //https://www.youtube.com/channel/[Channel ID]
     var newLink = document.createElement("a");
     newLink.href = '//youtube.com/channel/' + channelIds[i];
-    thumbnail.appendChild(newLink);
+    thumbnail.insertBefore(newLink, thumbnail.firstChild);
+
 
     //Create channel thumbnail
     var newImg = document.createElement("img");
@@ -246,7 +247,22 @@ function checkLiveEvents(channelIds,
     }
   });
 }
+//------------------------------------------------------------------------------
+function createLiveThumbnails(currentChannelID, LiveIds, LiveThumbnails, LiveTitle, LiveDescription) 
+{
+    for (var i = 0; i < LiveIds.length; i++) {
+      //New Link
+      var newLink = document.createElement("a");
+      newLink.href = '//youtube.com/watch?v=' + LiveIds[i];
+      document.getElementById("videoThumbnails_" + currentChannelID).appendChild(newLink);
 
+      //Create video thumbnail
+      var newImg = document.createElement("img");
+      newImg.src = LiveThumbnails[i];
+      newImg.alt = LiveTitle[i] + " - " + LiveDescription[i];
+      newLink.insertBefore(newImg, newLink.firstChild);          
+    }
+}
 //------------------------------------------------------------------------------
 // input: array of channelIds, type (e.g. likes, favorites, uploads, watchHistory, watchLater)
 // output: array of playlist ID 
