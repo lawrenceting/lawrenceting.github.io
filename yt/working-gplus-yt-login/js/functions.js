@@ -29,7 +29,7 @@ function subscriptionsList(numSubsToRetrive,
   var request = gapi.client.youtube.subscriptions.list({
       mine: true,
       part: 'snippet',
-      maxResults: 5,
+      maxResults: 50,
       order: 'unread',
       pageToken: nextPageToken,
       fields: 'items/snippet, nextPageToken, pageInfo'
@@ -94,7 +94,8 @@ function subscriptionsList(numSubsToRetrive,
                         addTitle: addTitle,
                         nextPageToken: nextPageToken,
                         addThumbnails: addThumbnails,
-                        addDescription: addDescription
+                        addDescription: addDescription,
+                        myChannelID: myChannelID
             }); 
               
           } else if (typeof errorCallback === "function") {
@@ -286,7 +287,6 @@ function getPlaylistID(channelIds,
   });
 
   request.execute(function(response) {
-
     // Termination condition to prevent infinite recursion
     if ('error' in response) {
       displayMessage(response.error.message);
@@ -336,10 +336,10 @@ function getPlaylistID(channelIds,
 // Calls the Data API to retrieve the items in a particular playlist. In this
 // example, we are retrieving a playlist of the user's
 // uploaded videos. By default, the list returns the most recent videos first.
-function getUploadedVideosID(uploadsListId, errorCallback, callback) {
+function getUploadedVideosID(playlistId, errorCallback, callback) {
   // https://developers.google.com/youtube/v3/docs/playlistItems/list
   var request = gapi.client.youtube.playlistItems.list({
-    playlistId: uploadsListId,
+    playlistId: playlistId,
     part: 'snippet',
     maxResults: 2
   });
@@ -376,10 +376,25 @@ function getUploadedVideosID(uploadsListId, errorCallback, callback) {
         }
 
       } else {
-        displayMessage('There are no videos in this channel.');
+        displayMessage('There are no videos in this channel.See upload playlist ' + playlistId);
       }
     }
   });
+}
+//------------------------------------------------------------------------------
+function createVideoThumbnails(videoIds, videoThumbnails, currentChannelID, uploadsListId) 
+{
+  //Create video thumbnails and link
+  for (var i = 0; i < videoIds.length; i++) {
+    //https://www.youtube.com/watch?v=[Video ID]&list=[Upload Playlist]
+    var newLink = document.createElement("a");
+    newLink.href = '//youtube.com/watch?v=' + videoIds[i] + '&list=' + uploadsListId;
+    document.getElementById("videoThumbnails_" + currentChannelID).appendChild(newLink);
+
+    var newImg = document.createElement("img");
+    newImg.src = videoThumbnails[i];
+    newLink.appendChild(newImg);
+  }
 }
 //------------------------------------------------------------------------------
 // Helper method to display a message on the page.

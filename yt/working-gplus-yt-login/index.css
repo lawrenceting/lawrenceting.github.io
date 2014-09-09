@@ -12,6 +12,7 @@
 
 body{
 	text-align: center;
+    background-color: rgba(235,235,236,1);
 }
 
 header{
@@ -43,6 +44,7 @@ div[id ^= "channelContainer_"]{
 	padding: 1px auto;
 	text-align: left;
 	clear: both;
+    background-color: white;
 }
 
 div[id ^= "channelThumbnail_"]{
