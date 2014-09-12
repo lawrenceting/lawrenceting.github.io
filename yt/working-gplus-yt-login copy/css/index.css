@@ -46,23 +46,59 @@ header, footer{
 	clear: both;
 }
 
-.channelThumbnail{
+.channelThumbnail {
     float: left;
+    width: 90px;
+    height: 90px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .uploadThumbnail, 
 .liveThumbnail {
     display: inline-block;
+    width: 120px;
+    height: 90px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center
+}
+
+.channelThumbnail .channelOverlay, 
+.thumbnailOverlay { 
+    position: relative; 
+    top: 0px; 
+    background: #000000; 
+    opacity: 0; 
+    width: 100%;
+    height: 100%;
+}
+
+.channelThumbnail:hover .channelOverlay,
+.thumbnailOverlay { 
+    opacity: 0.5;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.thumbnailOverlay:hover { 
+    opacity: 0.0; 
 }
 
 .thumbnailsScrollArea{
-    overflow: hidden;
-}
-
-.thumbnailsContainer{
     overflow-x: scroll;
     overflow-y: hidden;
+}
+
+.thumbnailsContainer {
     width: 100%;
     white-space: nowrap;
     float: left;
+}
+
+.thumbnailOverlay { 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center
 }

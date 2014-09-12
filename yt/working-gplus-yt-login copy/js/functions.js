@@ -1,11 +1,4 @@
 //------------------------------------------------------------------------------
-function async(your_function, callback) {
-    setTimeout(function() {
-        your_function;
-        if (callback) {callback();}
-    }, 0);
-}
-//------------------------------------------------------------------------------
 // get list of subscriptions
 function subscriptionsList(numSubsToRetrive,
                             nextPageToken, 
@@ -13,8 +6,7 @@ function subscriptionsList(numSubsToRetrive,
                             channelThumbnails, 
                             channelTitle,
                             channelDescription, 
-                            errorCallback,
-                            callback) 
+                            errorCallback, callback) 
 {
   //totalResults, channelIds, channelThumbnails, callback: do not change, leave value as is
   //totalSubs: number of subs to display, enter 'all' for all subs
@@ -37,7 +29,6 @@ function subscriptionsList(numSubsToRetrive,
   }
 
   request.execute(function(response) {
-
     var totalSubs = response.pageInfo.totalResults;
     var myChannelID = response.items[0].snippet.channelId;
     var maxResults = request.B.rpcParams.maxResults;
@@ -114,8 +105,7 @@ function subscriptionsList(numSubsToRetrive,
                                   channelThumbnails, 
                                   channelTitle,
                                   channelDescription, 
-                                  errorCallback,
-                                  callback);
+                                  errorCallback, callback);
       }
   });
 }
@@ -133,6 +123,12 @@ function createDivs(channelIds) {
     channelThumbnail.id = "channelThumbnail_" + channelIds[i];
     channelThumbnail.className = "channelThumbnail";
     channel.insertBefore(channelThumbnail, channel.firstChild);
+
+    //Create overlay for channel thumbnail
+    var overlay = document.createElement("div");
+    overlay.id = "channelOverlay_" + channelIds[i];
+    overlay.className = "channelOverlay";
+    channelThumbnail.appendChild(overlay);
       
     //Create div for scroll area
     var thumbnailsScrollArea = document.createElement("div");
@@ -153,8 +149,7 @@ function checkLiveEvents(channelIds,
                           LiveTitle, 
                           LiveDescription, 
                           counter, 
-                          errorCallback, 
-                          callback) 
+                          errorCallback, callback) 
 {
     // Use the JavaScript client library to create a search.list() API call.
     var request = gapi.client.youtube.search.list({
@@ -234,8 +229,7 @@ function checkLiveEvents(channelIds,
                             LiveTitle, 
                             LiveDescription, 
                             counter, 
-                            errorCallback, 
-                            callback);
+                            errorCallback, callback);
     }
   });
 }
@@ -244,22 +238,33 @@ function createLiveThumbnails(currentChannelID, LiveIds, LiveThumbnails, LiveTit
 {
     for (var i = 0; i < LiveIds.length; i++) {
         //Create div for video thumbnails
+        var videoThumbnails = document.getElementById("thumbnailsContainer_" + currentChannelID);
+        
         var newDiv = document.createElement("div");
         newDiv.id = "liveThumbnail_" + LiveIds[i];
         newDiv.className = "liveThumbnail";
-        var videoThumbnails = document.getElementById("thumbnailsContainer_" + currentChannelID);
+        newDiv.style.backgroundImage="url(" + LiveThumbnails[i] + ")";
         videoThumbnails.insertBefore(newDiv, videoThumbnails.firstChild);
+
+        //Create overlay for thumbnail
+        var overlay = document.createElement("div");
+        overlay.id = "thumbnailOverlay_" + LiveIds[i];
+        overlay.className = "thumbnailOverlay";
+        overlay.style.backgroundImage="url(" + "http://goo.gl/QSF35p" + ")";
+        newDiv.appendChild(overlay);
         
         //New Link
         var newLink = document.createElement("a");
         newLink.href = '//youtube.com/watch?v=' + LiveIds[i];
-        newDiv.appendChild(newLink);
+        newLink.innerHTML += "Live!";
+        overlay.appendChild(newLink);
+        
         
         //Create video thumbnail
-        var newImg = document.createElement("img");
-        newImg.src = LiveThumbnails[i];
-        newImg.alt = LiveTitle[i] + " - " + LiveDescription[i];
-        newLink.insertBefore(newImg, newLink.firstChild);          
+        //var newImg = document.createElement("img");
+        //newImg.src = LiveThumbnails[i];
+        //newImg.alt = LiveTitle[i] + " - " + LiveDescription[i];
+        //newLink.insertBefore(newImg, newLink.firstChild);          
     }
 }
 //------------------------------------------------------------------------------
@@ -269,8 +274,7 @@ function getPlaylistID(channelIds,
                         playlistIds, 
                         type,
                         counter, 
-                        errorCallback, 
-                        callback)  
+                        errorCallback, callback)  
 {
   // https://developers.google.com/youtube/v3/docs/channels/list
   var request = gapi.client.youtube.channels.list({
@@ -319,8 +323,7 @@ function getPlaylistID(channelIds,
                             playlistIds, 
                             type,
                             counter, 
-                            errorCallback, 
-                            callback
+                            errorCallback, callback
                           );
     }
   });
@@ -400,6 +403,13 @@ function createVideoThumbnails(videoIds, videoThumbnails, currentChannelID, uplo
     newImg.src = videoThumbnails[i];
     newLink.appendChild(newImg);
   }
+}
+//------------------------------------------------------------------------------
+function async(your_function, callback) {
+    setTimeout(function() {
+        your_function;
+        if (callback) {callback();}
+    }, 0);
 }
 //------------------------------------------------------------------------------
 // Helper method to display a message on the page.

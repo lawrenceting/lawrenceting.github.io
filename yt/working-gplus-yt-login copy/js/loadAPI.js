@@ -8,7 +8,7 @@ function makeApiCall() {
             // After both client interfaces load, use the Data API to request
             // information about the authenticated user's channel.
             // Get Subscriptions (Details and Thumbnails)
-            subscriptionsList(10, '', [], [], [], [],
+            subscriptionsList(50, '', [], [], [], [],
                 function(errorMessage) { console.log(errorMessage); }, 
                 function(result) {
 
@@ -53,18 +53,21 @@ function createChannelThumbnails(channelThumbnails, channelIds, channelTitle, ch
     console.log("Creating channel thumbnail: " + channelIds[i]);
 
     var channelThumbnail = document.getElementById("channelThumbnail_" + channelIds[i]);
+    channelThumbnail.style.backgroundImage="url(" + channelThumbnails[i] + ")";
+      
     //New Link
     //https://www.youtube.com/channel/[Channel ID]
+    var channelOverlay = document.getElementById("channelOverlay_" + channelIds[i]);
     var newLink = document.createElement("a");
     newLink.href = '//youtube.com/channel/' + channelIds[i];
-    channelThumbnail.insertBefore(newLink, channelThumbnail.firstChild);
+    newLink.innerHTML += (channelTitle[i]);
+    channelOverlay.insertBefore(newLink, channelOverlay.firstChild);
 
     //Create channel thumbnail
-    var newThumbnail = document.createElement("img");
-    newThumbnail.src = channelThumbnails[i];
-    newThumbnail.alt = channelTitle[i] + " - " + channelDescription[i];
-    newLink.appendChild(newThumbnail);
-    newLink.innerHTML += (channelTitle[i]);
+    //var newThumbnail = document.createElement("img");
+    //newThumbnail.src = channelThumbnails[i];
+    //newThumbnail.alt = channelTitle[i] + " - " + channelDescription[i];
+    //newLink.appendChild(newThumbnail);
   }
 }
 //------------------------------------------------------------------------------
