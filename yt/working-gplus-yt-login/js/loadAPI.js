@@ -8,7 +8,7 @@ function makeApiCall() {
             // After both client interfaces load, use the Data API to request
             // information about the authenticated user's channel.
             // Get Subscriptions (Details and Thumbnails)
-            subscriptionsList(2, '', [], [], [], [],
+            subscriptionsList(50, '', [], [], [], [],
                 function(errorMessage) { console.log(errorMessage); }, 
                 function(result) {
 
@@ -18,23 +18,25 @@ function makeApiCall() {
                 var addDescription = result.addDescription;
                 var nextPageToken = result.nextPageToken;
                 var myChannelID = result.myChannelID;
-
+                
+                async(createDivs(addIds), null);
                 async(createChannelThumbnails(addThumbnails, addIds, addTitle, addDescription), null);
                 async(createLiveEvents(addIds), null);
 //------------------------------------------------------------------------------
                 var arr = []
                 arr.push(myChannelID);
                 //get watch history playlist id
-                getPlaylistID(arr, [], "uploads", 0, 
+                getPlaylistID(arr, [], "watchHistory", 0, 
                     function(errorMessage) { console.log(errorMessage); }, 
                     function(result) {
 
-                    var watchHistoryID = result.playlistId;        
-
+                    var watchHistoryID = result.playlistId;    
+                    
                     async(uploads(addIds, myChannelID, watchHistoryID), null);
-
-                    //removeEmptyChannels(addIds);
                 });
+                
+                //removeEmptyChannels(addIds;
+                
             });
         });
     });
@@ -42,6 +44,31 @@ function makeApiCall() {
     gapi.client.load('plus', 'v1', function() {
         googlePlus();
     });
+}
+
+//------------------------------------------------------------------------------
+function createChannelThumbnails(channelThumbnails, channelIds, channelTitle, channelDescription) {
+  for (var i = 0; i < channelIds.length; i++) {
+
+    console.log("Creating channel thumbnail: " + channelIds[i]);
+
+    var channelThumbnail = document.getElementById("channelThumbnail_" + channelIds[i]);
+    channelThumbnail.style.backgroundImage="url(" + channelThumbnails[i] + ")";
+      
+    //New Link
+    //https://www.youtube.com/channel/[Channel ID]
+    var channelOverlay = document.getElementById("channelOverlay_" + channelIds[i]);
+    var newLink = document.createElement("a");
+    newLink.href = '//youtube.com/channel/' + channelIds[i];
+    newLink.innerHTML += (channelTitle[i]);
+    channelOverlay.insertBefore(newLink, channelOverlay.firstChild);
+
+    //Create channel thumbnail
+    //var newThumbnail = document.createElement("img");
+    //newThumbnail.src = channelThumbnails[i];
+    //newThumbnail.alt = channelTitle[i] + " - " + channelDescription[i];
+    //newLink.appendChild(newThumbnail);
+  }
 }
 //------------------------------------------------------------------------------
 function createLiveEvents(channelIds) {
@@ -69,62 +96,42 @@ function uploads(channelIds, myChannelID, watchHistoryID) {
         var uploadsListId = result.playlistId;
         var currentChannelID = result.currentChannelID;
 //------------------------------------------------------------------------------
-        getUploadedVideosID(uploadsListId, 
+        getPlaylistVideosID(uploadsListId, '', currentChannelID,
           function(errorMessage) { console.log(errorMessage); }, 
           function(result) {
 
             var videoIds = result.videoIds;
             var videoThumbnails = result.videoThumbnails;
-//------------------------------------------------------------------------------
-            removeWatchedVideos(videoIds, videoThumbnails, watchHistoryID, 
-              function(errorMessage) { console.log(errorMessage); }, 
-              function(result) {
-
-                var id = result.id;
-                async(createVideoThumbnails(videoIds, videoThumbnails, currentChannelID, uploadsListId), null);    
-            });
-        });
-    });
-}
-//------------------------------------------------------------------------------
-function removeWatchedVideos(videoIds, videoThumbnails, watchHistoryID, errorCallback, callback){
-    
-    for (var i = 0; i < videoIds.length; i++) {
-
-        var id = 123;
-
-        getUploadedVideosID(watchHistoryID, 
-          function(errorMessage) { console.log(errorMessage); }, 
-          function(result) {
-
-            //check if video exist in watch histpry playlist items
-            // if no then create thumbnail
-            // add input to get uploaded
+            var totalResults = result.totalResults;
             
-            var videoIds = result.videoIds;
-            var videoThumbnails = result.videoThumbnails;
+            async(createVideoThumbnails(videoIds, videoThumbnails, currentChannelID, uploadsListId), null);    
+//------------------------------------------------------------------------------
+            //Remove watched videos
+            for (var i = 0; i < videoIds.length; i++) {
 
+                getPlaylistVideosID(watchHistoryID, videoIds[i], currentChannelID,
+                  function(errorMessage) { console.log(errorMessage); }, 
+                  function(result) {
 
-            //
-
-            if (typeof callback === "function") {
-                 callback({
-                    id: id,
-                    thumbnail: thumbnail
-                }); 
-
-            } else if (typeof errorCallback === "function") {
-                errorCallback("The success callback function passed in wasn't a function.");
+                    var id = result.videoIds;
+                    var totalResults = result.totalResults;
+                    
+                    if (totalResults === 1) {
+                        document.getElementById("uploadThumbnail_" + id[0]).remove();
+                    }
+                });
             }
         });
-    }
+    });
 }
 //------------------------------------------------------------------------------
 function removeEmptyChannels(videoIds) {
 
   for (var i = 0; i < videoIds.length; i++) {
-      //'div#videoThumbnails_'
-      
-    $('div#channelContainer_' + 'UCYfdidRxbB8Qhf0Nx7ioOYw').fadeOut();
+      //''
+    if( !$.trim( $('div#thumbnailsContainer_' + videoIds[i]).html() ).length ) {
+        
+    }
+    //
   }
 }

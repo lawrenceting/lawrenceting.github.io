@@ -12,32 +12,33 @@
 
 body{
 	text-align: center;
+    background-color: rgba(235,235,236,1);
 }
 
-header{
+header, footer{
+    border: 1px solid black;
 	display: block;
-	border: 1px solid black;
 	clear: both;
 }
 
 #auth{
+    border: 1px solid black;
 	display: block;
-	border: 1px solid black;
 	float:right; 
 }
 
 #content{
+    border: 1px solid black;
 	display: block;
-	border: 1px solid black;
 	margin: auto;
     margin-right: 5%;
     margin-left: 5%;
 	clear: both;
 }
 
-div[id ^= "channelContainer_"]{
-	display: block;
+.channelContainer{
 	border: 1px solid black;
+    display: block;
 	width: auto;
 	margin: auto;
 	padding: 1px auto;
@@ -45,22 +46,23 @@ div[id ^= "channelContainer_"]{
 	clear: both;
 }
 
-div[id ^= "channelThumbnail_"]{
-  display: block;
-  border: 1px solid black;
-  float:left; 
-  width:auto;
+.channelThumbnail{
+    float: left;
 }
 
-div[id ^= "videoThumbnail_"]{
-  display: block;
-  border: 1px solid black;
-  float:left; 
-  width:auto;
+.uploadThumbnail, 
+.liveThumbnail {
+    display: inline-block;
 }
 
-footer{
-	display: block;
-	border: 1px solid black;
-	clear: both;
+.thumbnailsScrollArea{
+    overflow: hidden;
+}
+
+.thumbnailsContainer{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    white-space: nowrap;
+    float: left;
 }

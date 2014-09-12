@@ -1,8 +1,9 @@
-// Helper function to display JavaScript value on HTML page.
-function showResponse(response) {
-    var responseString = JSON.stringify(response, '', 2);
-    document.getElementById('response').innerHTML += responseString + 
-    '<br>---------------------------------<br>';
+//------------------------------------------------------------------------------
+function async(your_function, callback) {
+    setTimeout(function() {
+        your_function;
+        if (callback) {callback();}
+    }, 0);
 }
 //------------------------------------------------------------------------------
 // get list of subscriptions
@@ -13,7 +14,7 @@ function subscriptionsList(numSubsToRetrive,
                             channelTitle,
                             channelDescription, 
                             errorCallback,
-                            callback, callback_1, callback_2) 
+                            callback) 
 {
   //totalResults, channelIds, channelThumbnails, callback: do not change, leave value as is
   //totalSubs: number of subs to display, enter 'all' for all subs
@@ -87,14 +88,8 @@ function subscriptionsList(numSubsToRetrive,
                         addTitle: addTitle,
                         nextPageToken: nextPageToken,
                         addThumbnails: addThumbnails,
-                        addDescription: addDescription
-            }); 
-            callback_1({
-                addIds: addIds
-            }); 
-            callback_2({
-                addIds: addIds,
-                myChannelID: (response.items[0].snippet.channelId)
+                        addDescription: addDescription,
+                        myChannelID: myChannelID
             }); 
               
           } else if (typeof errorCallback === "function") {
@@ -120,44 +115,36 @@ function subscriptionsList(numSubsToRetrive,
                                   channelTitle,
                                   channelDescription, 
                                   errorCallback,
-                                  callback, callback_1, callback_2);
+                                  callback);
       }
   });
 }
 //------------------------------------------------------------------------------
-function createChannelThumbnails(channelThumbnails, channelIds, channelTitle, channelDescription) {
+function createDivs(channelIds) {
   for (var i = 0; i < channelIds.length; i++) {
-
-    console.log("Creating channel thumbnail: " + channelIds[i]);
-
     //Create div for channel
     var channel = document.createElement("div");
     channel.id = "channelContainer_" + channelIds[i];
+    channel.className = "channelContainer";
     document.getElementById('content').appendChild(channel);
-
-    //Create div for thumbnail
-    var thumbnail = document.createElement("div");
-    thumbnail.id = "channelThumbnail_" + channelIds[i];
-    channel.insertBefore(thumbnail, channel.firstChild);
-
-    //New Link
-    //https://www.youtube.com/channel/[Channel ID]
-    var newLink = document.createElement("a");
-    newLink.href = '//youtube.com/channel/' + channelIds[i];
-    thumbnail.insertBefore(newLink, thumbnail.firstChild);
-
-    //Create channel thumbnail
-    var newImg = document.createElement("img");
-    newImg.src = channelThumbnails[i];
-    newImg.alt = channelTitle[i] + " - " + channelDescription[i];
-    newLink.appendChild(newImg);
-    newLink.innerHTML += (channelTitle[i]);
-
+      
+    //Create div for channel thumbnail
+    var channelThumbnail = document.createElement("div");
+    channelThumbnail.id = "channelThumbnail_" + channelIds[i];
+    channelThumbnail.className = "channelThumbnail";
+    channel.insertBefore(channelThumbnail, channel.firstChild);
+      
+    //Create div for scroll area
+    var thumbnailsScrollArea = document.createElement("div");
+    thumbnailsScrollArea.className = "thumbnailsScrollArea";
+    channel.appendChild(thumbnailsScrollArea);
+      
     //Create div for video thumbnails
-    var newDiv = document.createElement("div");
-    newDiv.id = "videoThumbnails_" + channelIds[i];
-    document.getElementById("channelContainer_" + channelIds[i]).appendChild(newDiv);
-  };
+    var thumbnailsContainer = document.createElement("div");
+    thumbnailsContainer.id = "thumbnailsContainer_" + channelIds[i];
+    thumbnailsContainer.className = "thumbnailsContainer";
+    thumbnailsScrollArea.appendChild(thumbnailsContainer);
+  }
 }
 //------------------------------------------------------------------------------
 function checkLiveEvents(channelIds, 
@@ -256,16 +243,23 @@ function checkLiveEvents(channelIds,
 function createLiveThumbnails(currentChannelID, LiveIds, LiveThumbnails, LiveTitle, LiveDescription) 
 {
     for (var i = 0; i < LiveIds.length; i++) {
-      //New Link
-      var newLink = document.createElement("a");
-      newLink.href = '//youtube.com/watch?v=' + LiveIds[i];
-      document.getElementById("videoThumbnails_" + currentChannelID).appendChild(newLink);
-
-      //Create video thumbnail
-      var newImg = document.createElement("img");
-      newImg.src = LiveThumbnails[i];
-      newImg.alt = LiveTitle[i] + " - " + LiveDescription[i];
-      newLink.insertBefore(newImg, newLink.firstChild);          
+        //Create div for video thumbnails
+        var newDiv = document.createElement("div");
+        newDiv.id = "liveThumbnail_" + LiveIds[i];
+        newDiv.className = "liveThumbnail";
+        var videoThumbnails = document.getElementById("thumbnailsContainer_" + currentChannelID);
+        videoThumbnails.insertBefore(newDiv, videoThumbnails.firstChild);
+        
+        //New Link
+        var newLink = document.createElement("a");
+        newLink.href = '//youtube.com/watch?v=' + LiveIds[i];
+        newDiv.appendChild(newLink);
+        
+        //Create video thumbnail
+        var newImg = document.createElement("img");
+        newImg.src = LiveThumbnails[i];
+        newImg.alt = LiveTitle[i] + " - " + LiveDescription[i];
+        newLink.insertBefore(newImg, newLink.firstChild);          
     }
 }
 //------------------------------------------------------------------------------
@@ -286,7 +280,6 @@ function getPlaylistID(channelIds,
   });
 
   request.execute(function(response) {
-
     // Termination condition to prevent infinite recursion
     if ('error' in response) {
       displayMessage(response.error.message);
@@ -336,19 +329,23 @@ function getPlaylistID(channelIds,
 // Calls the Data API to retrieve the items in a particular playlist. In this
 // example, we are retrieving a playlist of the user's
 // uploaded videos. By default, the list returns the most recent videos first.
-function getUploadedVideosID(uploadsListId, errorCallback, callback) {
+function getPlaylistVideosID(playlistId, videoId, currentChannelID, errorCallback, callback) {
   // https://developers.google.com/youtube/v3/docs/playlistItems/list
+    
   var request = gapi.client.youtube.playlistItems.list({
-    playlistId: uploadsListId,
+    playlistId: playlistId,
     part: 'snippet',
-    maxResults: 2
+    maxResults: 15
   });
+    if (videoId != '') {request.B.rpcParams.videoId = videoId;} 
+    
     //https://www.youtube.com/playlist?list=[playlistId]
 
   request.execute(function(response) {
-
+      
     if ('error' in response) {
-      displayMessage(response.error.message);
+        displayMessage(response.error.message);
+        
     } else {
       if ('items' in response) {
         // jQuery.map() iterates through all of the items in the response and
@@ -367,6 +364,7 @@ function getUploadedVideosID(uploadsListId, errorCallback, callback) {
         //return result
         if (typeof callback === "function") {
           callback({
+                    totalResults: response.pageInfo.totalResults,
                     videoIds: videoIds,
                     videoThumbnails: videoThumbnails
                   });
@@ -376,37 +374,43 @@ function getUploadedVideosID(uploadsListId, errorCallback, callback) {
         }
 
       } else {
-        displayMessage('There are no videos in this channel.');
+        displayMessage('There are no videos in this channel.See upload playlist ' + playlistId);
+        console.log('videoId: ' + videoId + ' is not found in playlist ' + playlistId);
       }
     }
   });
 }
 //------------------------------------------------------------------------------
-function uploads(channelIds, myChannelID) {
-  // Now that we know the channelIds of the subscriptions,
-  // we can retrieve the upload playlist for each subscriptions.
-  getPlaylistID(channelIds, [], "uploads", 0, 
-    function(errorMessage) { console.log(errorMessage); }, 
-    function(result) {
+function createVideoThumbnails(videoIds, videoThumbnails, currentChannelID, uploadsListId) 
+{   
+  for (var i = 0; i < videoIds.length; i++) {
+    //Create div for video thumbnails
+    var newDiv = document.createElement("div");
+    newDiv.id = "uploadThumbnail_" + videoIds[i];
+    newDiv.className = "uploadThumbnail";
+    document.getElementById("thumbnailsContainer_" + currentChannelID).appendChild(newDiv);      
+    
+    //Create video thumbnails and link
+    //https://www.youtube.com/watch?v=[Video ID]&list=[Upload Playlist]
+    var newLink = document.createElement("a");
+    newLink.href = '//youtube.com/watch?v=' + videoIds[i] + '&list=' + uploadsListId;
+    newDiv.appendChild(newLink);
 
-    var uploadsListId = result.playlistId;
-    var currentChannelID = result.currentChannelID;
-
-    getUploadedVideosID(uploadsListId, 
-      function(errorMessage) { console.log(errorMessage); }, 
-      function(result) {
-
-        var videoIds = result.videoIds;
-        var videoThumbnails = result.videoThumbnails;
-
-        createVideoThumbnails(videoIds, videoThumbnails, currentChannelID, uploadsListId);
-    });
-      
-    //getWatchHistoryID(channelIds, channelThumbnails, uploadsListIds, myChannelID);
-  });
+    var newImg = document.createElement("img");
+    newImg.src = videoThumbnails[i];
+    newLink.appendChild(newImg);
+  }
 }
 //------------------------------------------------------------------------------
 // Helper method to display a message on the page.
 function displayMessage(message) {
   $('#message').text(message).show();
 }
+//------------------------------------------------------------------------------
+// Helper function to display JavaScript value on HTML page.
+function showResponse(response) {
+    var responseString = JSON.stringify(response, '', 2);
+    document.getElementById('response').innerHTML += responseString + 
+    '<br>---------------------------------<br>';
+}
+//------------------------------------------------------------------------------
