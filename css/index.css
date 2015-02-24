@@ -1,14 +1,4 @@
-body {
-	overflow-y: hidden;
-	overflow-x: hidden;
-}
-hr,
-#loadMore,
-#player-navtabs,
-.channelTitle-container {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
+
 /***********************************/
 /* header - avatar - display name */
 /***********************************/
@@ -24,33 +14,6 @@ hr,
 	height: 19%;
 }
 #authorize-button, #logout-button {
-}
-/***********************************/
-/* Content */
-/***********************************/
-#page-content-wrapper {
-	margin-top: 4.5em;
-}
-#sidebar-content, 
-#player-container,
-#rightpane {
-    overflow-y: scroll;
-	overflow-x: hidden;
-    height: 740px;
-	background-color: white;
-}
-
-.ch-vid-title a {
-	font-weight: bold;
-	color: black;
-	white-space: normal;
-	word-wrap: break-word;
-}
-small#vid_description, 
-#myModal p#myModalBody {
-	word-wrap: break-word;
-	text-align: justify;
-    text-justify: inter-word;
 }
 /***********************************/
 /* each channel */
@@ -154,34 +117,6 @@ small#vid_description,
 	color: green;
 	font-weight: bold;
 	text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
-}
-/***********************************/
-/* Player */
-/***********************************/
-#player-container {
-	border-left: 1px solid #D8D8D8;
-}
-select#speed {
-	width: 100%;
-}
-#chooseHideWatched .ui-selectmenu-button span.ui-selectmenu-text {
-	padding-bottom: 0.1em;
-	padding-top: 0.1em;
-}
-/***********************************/
-/* L+R pane */
-/***********************************/
-.toggled { 
-    -webkit-transition: all 0.25s ease;
-    -moz-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
-    transition: all 0.25s ease;	
-}
-#rightpane {
-	opacity: 0.3;
-}
-#rightpane:hover {
-	opacity: 1;
 }
 /***********************************/
 /* Searchbox */
