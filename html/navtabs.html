@@ -1,0 +1,161 @@
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" id="rightpane-tabs" role="tablist">
+	<li class="active">
+		<a href="#home" role="tab" data-toggle="tab">
+			<span class="glyphicon glyphicon-info-sign"></span>
+		</a>
+	</li>
+<!-- ------------------------------------------------------------------------ -->	
+	<li>
+		<a href="#controls" role="tab" data-toggle="tab">
+			<span class="glyphicon glyphicon-cog"></span>
+		</a>
+	</li>
+<!-- ------------------------------------------------------------------------ -->	
+	<li>
+		<a href="#comments" role="tab" data-toggle="tab">
+			<span class="glyphicon glyphicon-comment"></span>
+		</a>
+	</li>
+<!-- ------------------------------------------------------------------------ -->	
+	<li>
+		<a href="#share" role="tab" data-toggle="tab">
+			<span class="glyphicon glyphicon-share"></span>
+		</a>
+	</li>
+<!-- ------------------------------------------------------------------------ -->
+	<li>
+		<a href="#download" role="tab" data-toggle="tab">
+			<span class="glyphicon glyphicon-download-alt"></span>
+		</a>
+	</li>
+<!-- ------------------------------------------------------------------------ -->	
+	<li>
+		<a href="#lock" role="tab" data-toggle="tab">
+			<span class="glyphicon glyphicon-lock"></span>
+		</a>
+	</li>
+</ul>
+<!-- ------------------------------------------------------------------------ -->
+<!-- Tab panes -->
+<div class="tab-content" id="rightpane-content">
+	<div class="tab-pane fade in active" id="home">
+		<p><small class="text-muted" id="vid_description">
+		
+		</small></p>
+	</div>
+<!-- ------------------------------------------------------------------------ -->	
+	<div class="tab-pane fade" id="controls">
+		<div class="row">
+			
+			<div class="col-md-12">
+				<div id="speedDiv">
+					<label for="amount">Speed:</label>
+					<input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+					<div id="slider-range-max"></div>					
+				</div>
+			</div>
+		</div>
+		<div class="row">			
+			<div class="col-md-12">
+
+				<div id="chooseHideWatched">
+					<form action="#">
+						<fieldset>
+							<label for="speed">Hide Watched: </label>
+							</br>
+							<select name="speed" id="speed">
+								<option selected="selected">Unhide</option>
+								<option>Hide</option>
+							</select>
+						</fieldset>
+					</form>
+				</div>
+<!-- ------------------------------------------------------------------------ -->	
+		<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>				
+<!-- ------------------------------------------------------------------------ -->				
+				<div class="checkbox">
+					<label>
+						<input type='checkbox' value="" id='hideWatchedVideos'/>Hide Watched Videos
+					</label>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+<!-- ------------------------------------------------------------------------ -->			
+	<div class="tab-pane fade" id="comments">
+		
+		<div id="disqus_thread"></div>
+
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'cordapp'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	</div>
+<!-- ------------------------------------------------------------------------ -->	
+	<div class="tab-pane fade" id="share">
+		<!-- Go to www.addthis.com/dashboard to customize your tools -->
+		<div class="addthis_sharing_toolbox"></div>
+	</div>
+<!-- ------------------------------------------------------------------------ -->	
+	<div class="tab-pane fade" id="download">
+		
+		<div class="panel panel-primary">
+			<div class="panel-heading panel-primary">MP4</div>
+				<div class="list-group">
+					<a href="#" class="list-group-item">High Definition, 720p (1280x720)</a>
+					<a href="#" class="list-group-item">Standard Definition, 360p (640x360)</a>
+				</div>
+		</div>
+<!-- ------------------------------------------------------------------------ -->			
+		<div class="panel panel-success">
+			<div class="panel-heading">WebM</div>
+				<div class="list-group">
+					<a href="#" class="list-group-item">Standard Definition, 360p (640x360)</a>
+				</div>			
+		</div>		
+<!-- ------------------------------------------------------------------------ -->	
+		<div class="panel panel-info">
+			<div class="panel-heading">FLV</div>
+				<div class="list-group">
+					<a href="#" class="list-group-item">Low Definition, 240p (426x240)</a>
+				</div>
+		</div>			
+<!-- ------------------------------------------------------------------------ -->			
+		<div class="panel panel-warning">
+			<div class="panel-heading">3GP</div>
+				<div class="list-group">
+					<a href="#" class="list-group-item">Low Definition, 240p (426x240)</a>
+					<a href="#" class="list-group-item">Low Definition, 144p (256x144)</a>
+				</div>			
+		</div>			
+<!-- ------------------------------------------------------------------------ -->			
+		<div class="panel panel-danger">
+			<div class="panel-heading">Audio</div>
+				<div class="list-group">
+					<a href="#" class="list-group-item">128 Kbps</a>
+				</div>				
+		</div>			
+		
+	</div>
+<!-- ------------------------------------------------------------------------ -->	
+	<div class="tab-pane fade" id="lock">
+		<pre id='response'></pre>
+	</div>
+</div>
+<!-- ------------------------------------------------------------------------ -->
+<div class="modal-footer" id="rightpane-footer">
+	<button type="button" class="btn btn-danger btn-close" data-dismiss="modal">
+		Close
+	</button>
+</div>

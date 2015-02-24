@@ -1,0 +1,56 @@
+<div class="navbar navbar-fixed-top navbar-default" id="navbar" role="navigation">
+	<div class="container-fluid">
+<!-- ------------------------------------------------------------------------ -->		
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/cord">
+				<img src="images/logo.png" alt="Your Logo">
+			</a>
+		</div>
+<!-- ------------------------------------------------------------------------ -->
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			
+			<!-- Search input -->
+			<form class="navbar-form navbar-left" id="searchbox">
+				<div class="right-inner-addon">
+					<span class="icon-search glyphicon glyphicon-search"></span>
+					<input id="tags" type="text" class="form-control" placeholder="Search" name="q" autocomplete="off" required>
+				</div>
+			</form>					
+<!-- ------------------------------------------------------------------------ -->	
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="avatar">
+						<button id="authorize-button" class="btn btn-success" style="visibility: hidden">Login</button>
+						<span class="caret"></span>
+					</a>
+<!-- ------------------------------------------------------------------------ -->						
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">Something else here</a></li>
+						<li class="divider"></li>
+						
+						<li>
+							<div id = "auth">
+								<!--Add a button for the user to click to initiate auth sequence -->
+								
+								<button class="btn btn-danger" id="logout-button" style="visibility: ">
+									<span class="glyphicon glyphicon-off"></span> Sign out
+								</button>
+							</div> 	
+						</li>
+						
+					</ul>
+				</li>
+			</ul>
+<!-- ------------------------------------------------------------------------ -->				
+		</div><!-- /.container-fluid -->
+	</div><!-- /.navbar-collapse -->
+</div>
