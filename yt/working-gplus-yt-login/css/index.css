@@ -1,0 +1,105 @@
+/*
+* { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+*/
+*{
+	margin: 0px; 
+	padding: 0px; 
+}
+
+body{
+	text-align: center;
+    background-color: rgba(235,235,236,1);
+}
+
+header, footer{
+    border: 1px solid black;
+	display: block;
+	clear: both;
+}
+
+#auth{
+    border: 1px solid black;
+	display: block;
+	float:right; 
+}
+
+#content{
+    border: 1px solid black;
+	display: block;
+	margin: auto;
+    margin-right: 5%;
+    margin-left: 5%;
+	clear: both;
+}
+
+.channelContainer{
+	border: 1px solid black;
+    display: block;
+	width: auto;
+	margin: auto;
+	padding: 1px auto;
+	text-align: left;
+	clear: both;
+}
+
+.channelThumbnail {
+    float: left;
+    width: 90px;
+    height: 90px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.uploadThumbnail, 
+.liveThumbnail {
+    display: inline-block;
+    width: 120px;
+    height: 90px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center
+}
+
+.channelThumbnail .channelOverlay, 
+.thumbnailOverlay { 
+    position: relative; 
+    top: 0px; 
+    background: #000000; 
+    opacity: 0; 
+    width: 100%;
+    height: 100%;
+}
+
+.channelThumbnail:hover .channelOverlay,
+.thumbnailOverlay { 
+    opacity: 0.5;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.thumbnailOverlay:hover { 
+    opacity: 0.0; 
+}
+
+.thumbnailsScrollArea{
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.thumbnailsContainer {
+    width: 100%;
+    white-space: nowrap;
+    float: left;
+}
+
+.thumbnailOverlay { 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center
+}
