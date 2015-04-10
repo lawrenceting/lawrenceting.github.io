@@ -2,19 +2,18 @@
 	<div class="col-sm-12" id="userstyles-container">
 		<h2>User Styles</h2>
 		<script>
-			$(window).load(function(){
-				userstylesLoad();
-			});			
-			
-			var userstylesLoad = function(){
+			if (window.addEventListener)
+				window.addEventListener("load", userstylesLoad, false);
+			else if (window.attachEvent)
+				window.attachEvent("onload", userstylesLoad);
+			function userstylesLoad() {
 				var c = document.getElementById("userstyles-container");
 				var s1 = document.createElement("script");
-				s1.setAttribute("async", "true");
 				var s2 = s1.cloneNode(false);
 				s1.src = "/public/js/userstyles/v1.js";
 				c.appendChild(s1);
 				s2.src = "/public/js/userstyles/263946.jsonp";
-				c.appendChild(s2);				
+				c.appendChild(s2);
 			}
 		</script>
 	</div>
