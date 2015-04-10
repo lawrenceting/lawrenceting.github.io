@@ -4,7 +4,9 @@ var userstyles = {
 			"<dt><a href=\"${url}\" target=\"_new\">" + 
 				"<span class=\"userstyles-style-name\">${name}</span><br>" + 
 			"</a></dt>" + 
-			"<dd><span class=\"userstyles-style-description\">${description} </span></dd>" + 
+			"<dd>" + 
+				"<span class=\"userstyles-style-description\">${description} </span>" + 
+			"</dd>" + 
 		"</dl>",
 	
 	handleData: function(data) {
