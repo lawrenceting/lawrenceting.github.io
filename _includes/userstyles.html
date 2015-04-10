@@ -2,7 +2,8 @@
 	<div class="col-sm-12" id="userstyles-container">
 		<h2>User Styles</h2>
 		<script>
-			$(window).load(userstylesLoad);			
+			$(window).load(function() {userstylesLoad();
+			});			
 			
 			var userstylesLoad = function(){
 				var c = document.getElementById("userstyles-container");
@@ -13,7 +14,8 @@
 				c.appendChild(s1);
 				s2.src = "/public/js/userstyles/263946.jsonp";
 				c.appendChild(s2);				
-			};
+			}
+			
 		</script>
 	</div>
 </div><!-- end featuresHeading -->	
