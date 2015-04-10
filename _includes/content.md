@@ -1,7 +1,6 @@
 <div class="row" id="featuresHeading">
 	<div class="col-12">
 		<h2>Work</h2>
-		## Work
 		<p class="lead">Some recent projects that I have worked on.</p>
 	</div><!-- end col-12 -->
 </div><!-- end featuresHeading -->
