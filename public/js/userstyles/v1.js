@@ -1,6 +1,14 @@
 var userstyles = {
-	itemTemplate: "<li><a href=\"${url}\" target=\"_new\"><span class=\"userstyles-style-name\">${name}</span><br><span class=\"userstyles-style-info\">${weekly_installs} installs this week</span></a></li>",
+	itemTemplate: 
+		"<li>" + 
+			"<a href=\"${url}\" target=\"_new\">" + 
+				"<span class=\"userstyles-style-name\">${name}</span><br>" + 
+				"<span class=\"userstyles-style-description\">${description} </span>" + 
+			"</a>" + 
+		"</li>",
 
+		//"<span class=\"userstyles-style-description\">${weekly_installs} installs this week</span>" + 
+	
 	handleData: function(data) {
 		var replacements = this.itemTemplate.match(/\$\{[a-z_]+\}/g);
 		var container = document.getElementById("userstyles-container");
@@ -52,7 +60,42 @@ var userstyles = {
 	addStylesheet: function() {
 		var s = document.createElement("style");
 		s.setAttribute("type", "text/css");
-		var css = "#userstyles-container {width: 160px;font-size: 14px;overflow: hidden;}#userstyles-container h3 {margin-top: 5px;margin-bottom: 5px;}#userstyles-container ul {list-style-type: none;margin: 0;padding: 0;}#userstyles-container li a {display: block;color: black;text-decoration: none;padding: 3px 5px 0 5px;}#userstyles-container .userstyles-style-name {text-decoration: underline;}#userstyles-container .userstyles-style-info {font-size: 12px;color: green;}";
+		var css = "";
+//			"#userstyles-container {" + 
+//				"width: auto;" + 
+//				"font-size: 100%;" + 
+//				"overflow: hidden;" + 
+//			"}" + 
+//
+//			"#userstyles-container h3 {" + 
+//				"margin-top: 5px;" + 
+//				"margin-bottom: 5px;" + 
+//			"}" + 
+//
+//			"#userstyles-container ul {" + 
+//				"list-style-type: none;" + 
+//				"margin: 0;padding: 0;" + 
+//			"}" + 
+//
+//			"#userstyles-container li a {" + 
+//				"display: block;" + 
+//				"color: auto;" + 
+//				"text-decoration: none;" + 
+//				"padding: 3px 5px 3px 5px;" + 
+//				"border-style: ;" + 
+//				"border-width: ;" + 
+//				"border-color: ;" + 
+//			"}" + 
+//
+//			"#userstyles-container li a:hover .userstyles-style-name {" + 
+//				"text-decoration: underline;" + 
+//			"}" + 
+//
+//			"#userstyles-container .userstyles-style-description {" + 
+//				"font-size: 80%;" + 
+//				"color: green;" + 
+//			"}"		
+
 		if (s.styleSheet) {
 			s.styleSheet.cssText = css;
 		} else {
