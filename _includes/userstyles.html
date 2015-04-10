@@ -9,6 +9,7 @@
 			function userstylesLoad() {
 				var c = document.getElementById("userstyles-container");
 				var s1 = document.createElement("script");
+				s1.setAttribute("async", "true");
 				var s2 = s1.cloneNode(false);
 				s1.src = "/public/js/userstyles/v1.js";
 				c.appendChild(s1);
