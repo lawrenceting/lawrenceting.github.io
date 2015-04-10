@@ -2,10 +2,7 @@
 	<div class="col-sm-12" id="userstyles-container">
 		<h2>User Styles</h2>
 		<script>
-			if (window.addEventListener)
-				window.addEventListener("load", userstylesLoad, false);
-			else if (window.attachEvent)
-				window.attachEvent("onload", userstylesLoad);
+			userstylesLoad();
 			function userstylesLoad() {
 				var c = document.getElementById("userstyles-container");
 				var s1 = document.createElement("script");
