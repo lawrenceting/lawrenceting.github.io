@@ -3,27 +3,20 @@
 		<h2>User Styles</h2>
 	</div><!-- end col-12 -->
 
-	<div id="userstyles-container" class="col-12">
+	<div class="col-12">
 		<script>
-		if (window.addEventListener)
-			window.addEventListener("load", userstylesLoad, false);
-		else if (window.attachEvent)
-			window.attachEvent("onload", userstylesLoad);
-		function userstylesLoad() {
-			var c = document.getElementById("userstyles-container");
-			var s1 = document.createElement("script");
-			s1.setAttribute("async", "true");
-			var s2 = s1.cloneNode(false);
-			s1.src = "https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/widgets/v1.js";
-			c.appendChild(s1);
-			s2.src = "http://widget.userstyles.org/users/263946.jsonp?callback=userstyles.handleData";
-			c.appendChild(s2);
-		}
+			$.ajax({
+				type: "GET",
+				url: "http://widget.userstyles.org/users/263946.json",
+				dataType: "json",
+				async: true,
+				success: function( response ) {
+					alert(response);
+				}			
+			});	
 		</script>
-		<noscript>
-		Check out <a href="http://userstyles.org/users/263946">My User Styles</a>
-		</noscript>
 	</div>
+
 
 	
 </div><!-- end featuresHeading -->	
