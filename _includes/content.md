@@ -171,7 +171,9 @@
 			</div>
 			<div class="panel-body">
 				<center>
-				<img class="img-responsive" src="images/userstyles.jpg" alt="HTML5"> 
+				<a href="#userstyles-container">
+					<img class="img-responsive" src="images/userstyles.jpg" alt="HTML5"> 
+				</a>
 				</center>
 				<p>Auto hide bookmark toolbar and All-in-One Sidebar. Only for Firefox. Stylish extension required.</p>
 				
