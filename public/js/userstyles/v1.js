@@ -5,7 +5,9 @@ var userstyles = {
 				"<span class=\"userstyles-style-name\">${name}</span><br>" + 
 			"</a></dt>" + 
 			"<dd>" + 
-				"<span class=\"userstyles-style-description\">${description} </span>" + 
+				"<span class=\"userstyles-style-description\">${description} " + 
+				"<a href=\"${screenshot}\" target=\"_new\">[screenshot]</a>" + 
+				"</span>" + 
 			"</dd>" + 
 		"</dl>",
 	
