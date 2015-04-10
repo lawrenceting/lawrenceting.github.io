@@ -1,0 +1,208 @@
+#siframe_blog {
+    border:0px;
+    overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+hr,
+#loadMore,
+#player-navtabs,
+.channelTitle-container {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+/***********************************/
+/* header - avatar - display name */
+/***********************************/
+#avatar  {
+	padding: 0;		
+}
+#avatar * {
+	margin: 0.4em;
+	font-weight: bold;
+}
+#avatar img {
+	width: 19%;
+	height: 19%;
+}
+#authorize-button, #logout-button {
+}
+/***********************************/
+/* Content */
+/***********************************/
+#main {
+}
+#sidebar-content, 
+#player-container,
+#rightpane {
+    overflow-y: scroll;
+	overflow-x: hidden;
+    height: 740px;
+	background-color: white;
+}
+
+.ch-vid-title a {
+	font-weight: bold;
+	color: black;
+	white-space: normal;
+	word-wrap: break-word;
+}
+small#vid_description, 
+#myModal p#myModalBody {
+	word-wrap: break-word;
+	text-align: justify;
+    text-justify: inter-word;
+}
+/***********************************/
+/* each channel */
+/***********************************/
+.channelThumbnailContainer{
+	position: relative;	
+	width: 999%; /*temporary fix*/
+}
+#player-container .media-heading,
+.channelTitle-container .media-heading {
+	margin: 0;
+}
+.channelThumbnail {
+	height: 2.9em;
+	width: 2.9em;
+	position: relative;
+	margin: 0;
+	padding: 0;		
+}
+.videoThumbnail-default,
+.channelThumbnail {
+    background-size: cover; /*contain*/
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.channelContainer {
+	border-bottom: 0.1em solid #D8D8D8;
+	padding-bottom: 0.5em;
+	margin-bottom: 0.5em;
+}
+.nav-playlist,
+.channelTitle-container .ch-vid-title span {
+	opacity: 0;
+}
+.channelContainer:hover .nav-playlist,
+.channelContainer:hover .channelTitle-container .ch-vid-title span,
+.channelTitle-container:hover .ch-vid-title span {
+	opacity: 1;
+}
+/***********************************/
+/*  */
+/***********************************/
+.channelTitle-container .ch-vid-title span,
+.nav-playlist,
+.videoThumbnail-default {
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+.nowPlaying { 
+	border: 5px solid red;
+}
+.thumbnailsScrollArea {
+    overflow-x: scroll;
+    overflow-y: hidden;
+	white-space: nowrap;
+	height: 8.8em;
+}
+.thumbnailsContainer{
+	display: inline-block;
+}
+.thumbnailContainer {
+	width: 120px;
+    margin-right: 0.5em;
+	display: inline-block;
+	vertical-align: text-top;
+}
+.ch-vid-title span,
+.thumbnailContainer a {
+	font-size: 0.85em;
+}
+.thumbnailContainer:hover .videoThumbnail-default { 
+	opacity: 0.8;
+	border: 1px solid red;
+}
+.videoThumbnail-default { 
+    height: 69px; /*90px*/ /*crop*/ 
+	position: relative;
+	border: 1px solid #D8D8D8;
+}
+.lb-watched,
+.nav-playlist {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.lb-watched * {
+	color: white;
+	font-weight: bold;
+	text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+}
+.timeStamp {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+    color: white;
+	font-weight: bold;
+	text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+}
+.live-icon {
+	color: green;
+	font-weight: bold;
+	text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+}
+/***********************************/
+/* Player */
+/***********************************/
+#player-container {
+	border-left: 1px solid #D8D8D8;
+}
+select#speed {
+	width: 100%;
+}
+#chooseHideWatched .ui-selectmenu-button span.ui-selectmenu-text {
+	padding-bottom: 0.1em;
+	padding-top: 0.1em;
+}
+/***********************************/
+/* L+R pane */
+/***********************************/
+.toggled { 
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;	
+}
+#rightpane {
+	opacity: 0.3;
+}
+#rightpane:hover {
+	opacity: 1;
+}
+/***********************************/
+/* Searchbox */
+/***********************************/
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 30px;
+}
+.right-inner-addon .icon-search {
+    position: absolute;
+    right: 0px;
+    padding: 10px 10px;
+    pointer-events: none;
+}
+/***********************************/
+/* Search Results
+/* theming search result see - https://code.google.com/p/jquery-ui/source/browse/tags/1.8.22/themes/redmond/jquery.ui.autocomplete.css?spec=svn4139&r=4136
+/***********************************/
+.ui-menu {
+	padding-top: 0.5em;
+}
