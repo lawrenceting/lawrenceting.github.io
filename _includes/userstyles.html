@@ -5,15 +5,11 @@
 
 	<div class="col-12">
 		<script>
-			$.ajax({
-				type: "GET",
-				url: "http://widget.userstyles.org/users/263946.json",
-				dataType: "json",
-				async: true,
-				success: function( response ) {
-					alert(response);
-				}			
-			});	
+			
+	$.getJSON("playlists.json").fail(function(){}).done(function(json){ 
+		console.log(json);
+	});	
+		
 		</script>
 	</div>
 
