@@ -1,15 +1,43 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <div id="userstyles" class="row">
 	<div class="col-12">
 		<h2>User Styles</h2>
 	</div><!-- end col-12 -->
 
 	<div class="col-12">
+		
+		<div id="userstyles-container">
+			<script>
+				if (window.addEventListener)
+					window.addEventListener("load", userstylesLoad, false);
+				else if (window.attachEvent)
+					window.attachEvent("onload", userstylesLoad);
+				function userstylesLoad() {
+					var c = document.getElementById("userstyles-container");
+					var s1 = document.createElement("script");
+					s1.setAttribute("async", "true");
+					var s2 = s1.cloneNode(false);
+					s1.src = "/public/js/userstyles/v1.js";
+					c.appendChild(s1);
+					s2.src = "http://widget.userstyles.org/users/263946.jsonp?callback=userstyles.handleData";
+					c.appendChild(s2);
+				}
+			</script>
+		</div>
+		
 		<script>
 			
-	$.getJSON("http://widget.userstyles.org/users/263946.json").fail(function(){}).done(function(json){ 
+			
+			
+	$.getJSON("/public/js/userstyles/263946.json").fail(function(e){
+		console.log("GET Userstyles error");
+	}).done(function(json){ 
+		console.log("su");
 		console.log(json);
 	});	
 		
+
+			
 		</script>
 	</div>
 

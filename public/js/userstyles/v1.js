@@ -1,5 +1,11 @@
 var userstyles = {
-	itemTemplate: "<li><a href=\"${url}\" target=\"_new\"><span class=\"userstyles-style-name\">${name}</span><br><span class=\"userstyles-style-info\">${weekly_installs} installs this week</span></a></li>",
+	itemTemplate: 
+		"<li>" + 
+			"<a href=\"${url}\" target=\"_new\">" + 
+				"<span class=\"userstyles-style-name\">${name}</span><br>" + 
+				"<span class=\"userstyles-style-info\">${weekly_installs} installs this week</span>" + 
+			"</a>" + 
+		"</li>",
 
 	handleData: function(data) {
 		var replacements = this.itemTemplate.match(/\$\{[a-z_]+\}/g);
