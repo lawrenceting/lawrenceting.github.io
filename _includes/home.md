@@ -1,8 +1,3 @@
----
-layout: home
-title: Home
----
-
 <div id="wrapper">	
 	<header id="header" ng-include="'html/header.html'"></header><!-- navbar -->
 	<div class="container" id="main">
