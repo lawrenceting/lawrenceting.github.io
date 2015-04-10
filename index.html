@@ -3,22 +3,20 @@ layout: home
 title: Home
 ---
 
-<div id="wrapper">	
-	{% include header.html %}
-	<div class="container" id="main">
-		<div class="row">
-			<div class="col-sm-12">
-				{% include content.html %}
-				{% include automator.html %}
-			</div>
-			<div class="col-sm-12 text-center">
-				<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
-				<p><a href="//github.com/lawrenceting" target="_blank" >View code on Github</a></p>
-			</div>				
+{% include header.html %}
+<div class="container" id="main">
+	<div class="row">
+		<div class="col-sm-12">
+			{% include content.md %}
+			{% include automator.html %}
 		</div>
-	</div><!-- Page Content -->
-	{% include footer.html %}
-</div><!-- /#wrapper -->	
+		<div class="col-sm-12 text-center">
+			<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+			<p><a href="//github.com/lawrenceting" target="_blank" >View code on Github</a></p>
+		</div>				
+	</div>
+</div><!-- Page Content -->
+{% include footer.html %}
 {% include modal.html %}
 <!-- ------------------------------------------------------------------------ --> 	
 <!--jQuery JS-->
