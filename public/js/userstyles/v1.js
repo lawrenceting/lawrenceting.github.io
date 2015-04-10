@@ -3,8 +3,8 @@ var userstyles = {
 		"<li>" + 
 			"<a href=\"${url}\" target=\"_new\">" + 
 				"<span class=\"userstyles-style-name\">${name}</span><br>" + 
-			"</a>" + 
 				"<span class=\"userstyles-style-description\">${description} </span>" + 
+			"</a>" + 
 		"</li>",
 
 		//"<span class=\"userstyles-style-description\">${weekly_installs} installs this week</span>" + 
