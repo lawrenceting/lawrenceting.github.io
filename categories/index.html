@@ -1,369 +1,57 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-
-  <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-  <title>
-    
-      Categories &middot; Lawrence Ting
-    
-  </title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/public/css/poole.css">
-  <link rel="stylesheet" href="/public/css/syntax.css">
-  <link rel="stylesheet" href="/public/css/hyde.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-
-  <!-- Icons -->
-  <!--
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-  -->
-                                 <link rel="shortcut icon" href="/public/favicon.ico">
-
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-
-  <!-- Scripts -->
-    <!-- Scripts (accessible globally) -->
-  <script async src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
-  <script async src="//lawrenceting.github.io/public/js/google_analytics.js"></script>
-
-  <script async src="//lawrenceting.github.io/public/js/script.js"></script>
-</head>
-
-
-  <body>
-
-    <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <h1>
-        <a href="/">
-          Lawrence Ting
-        </a>
-      </h1>
-      <p class="lead"></p>
-    </div>
-
-    <nav class="sidebar-nav">
-<!--
-      <a class="sidebar-nav-item" href="/">Home</a>
--->
-      
-
-      
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-            <a class="sidebar-nav-item" href="/applescript/">AppleScript</a>
-          
-        
-      
-        
-      
-        
-          
-            <a class="sidebar-nav-item" href="/automator-workflows/">Automator Workflows</a>
-          
-        
-      
-        
-          
-            <a class="sidebar-nav-item" href="/contact/">Contact</a>
-          
-        
-      
-        
-          
-            <a class="sidebar-nav-item" href="/donate/">Donate</a>
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-          
-            <a class="sidebar-nav-item" href="/stylish-user-styles/">User Styles</a>
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-<!--
-      <a class="sidebar-nav-item" href="//github.com/lawrenceting/archive/v2.1.0.zip">Download</a>
--->
-      <a class="sidebar-nav-item" href="//github.com/lawrenceting" target="_blank">GitHub project</a>
-
-      <a class="sidebar-nav-item" href="//lawrenceting.github.io/atom.xml" target="_blank">RSS</a>
-<!--
-      <span class="sidebar-nav-item">Currently v2.1.0</span>
--->
-    </nav>
-
-    <p>&copy; 2014. All rights reserved.</p>
-  </div>
-</div>
-
-
-    <div class="content container">
-      <!-- List Categories -->
+---
+layout: default
+title: Categories
+redirect_from:
+  - /categories/shell-script/
+---
+<!-- List Categories -->
 <!--
 <ul class="tag-box inline">
-  
-  
-     
-      <li><a href="#applescript">Applescript <span>1</span></a></li>
-     
-      <li><a href="#itunes">Itunes <span>1</span></a></li>
-    
-  
-
+{% assign tags_list = site.categories %}  
+  {% if tags_list.first[0] == null %}
+    {% for tag in tags_list %} 
+      <li><a href="#{{ tag }}">{{ tag | capitalize }} <span>{{ site.tags[tag].size }}</span></a></li>
+    {% endfor %}
+  {% else %}
+    {% for tag in tags_list %} 
+      <li><a href="#{{ tag[0] }}">{{ tag[0] | capitalize }} <span>{{ tag[1].size }}</span></a></li>
+    {% endfor %}
+  {% endif %}
+{% assign tags_list = nil %}
 </ul>
 -->
 
 <!-- Categories -->
 <!--
- 
-  <h2 id="applescript">Applescript</h2>
+{% for tag in site.categories %} 
+  <h2 id="{{ tag[0] }}">{{ tag[0] | capitalize }}</h2>
   <ul class="post-list">
-      
-      
-        
-          
-            <li><a href="//lawrenceting.github.io/applescript/itunes/2014/08/09/Script-for-iTunes-Open-Selected-in-VLC/">Script for iTunes - Open Selected in VLC<span class="entry-date"> - <time datetime="2014-08-09T00:00:00+09:30" itemprop="datePublished">August 09, 2014</time></a></li>
-          
-        
-      
-      
-    
+    {% assign pages_list = tag[1] %}  
+      {% for post in pages_list %}
+        {% if post.title != null %}
+          {% if group == null or group == post.group %}
+            <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"> - <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% assign pages_list = nil %}
+    {% assign group = nil %}
   </ul>
- 
-  <h2 id="itunes">Itunes</h2>
-  <ul class="post-list">
-      
-      
-        
-          
-            <li><a href="//lawrenceting.github.io/applescript/itunes/2014/08/09/Script-for-iTunes-Open-Selected-in-VLC/">Script for iTunes - Open Selected in VLC<span class="entry-date"> - <time datetime="2014-08-09T00:00:00+09:30" itemprop="datePublished">August 09, 2014</time></a></li>
-          
-        
-      
-      
-    
-  </ul>
-
+{% endfor %}
 -->
 
- 
-  <h2 id="Geektool">Geektool</h2>
+{% for tag in site.tags %} 
+  <h2 id="{{ tag[0] }}">{{ tag[0] | capitalize }}</h2>
   <ul class="post-list">
-      
-      
-        
-          
-            <li><a href="//lawrenceting.github.io/2014/04/22/Chinese-Word-of-the-Day-Geeklet/">Chinese Word of the Day Geeklet<span class="entry-date"> - <time datetime="2014-04-22T00:00:00+09:30" itemprop="datePublished">April 22, 2014</time></a></li>
-          
-        
-      
-      
-    
+    {% assign pages_list = tag[1] %}  
+      {% for post in pages_list %}
+        {% if post.title != null %}
+          {% if group == null or group == post.group %}
+            <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"> - <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% assign pages_list = nil %}
+    {% assign group = nil %}
   </ul>
- 
-  <h2 id="Tweaks / Hacks / Fixes">Tweaks / hacks / fixes</h2>
-  <ul class="post-list">
-      
-      
-        
-          
-            <li><a href="//lawrenceting.github.io/2014/08/15/Unlock-Modem-Tools/">Unlock Modem Tools<span class="entry-date"> - <time datetime="2014-08-15T00:00:00+09:30" itemprop="datePublished">August 15, 2014</time></a></li>
-          
-        
-      
-        
-          
-            <li><a href="//lawrenceting.github.io/2014/08/08/Disable%20MPlayerX%20Fullscreen%20Animation/">Disable MPlayerX Fullscreen Animation<span class="entry-date"> - <time datetime="2014-08-08T00:00:00+09:30" itemprop="datePublished">August 08, 2014</time></a></li>
-          
-        
-      
-        
-          
-            <li><a href="//lawrenceting.github.io/2014/06/08/Fix-Frozen-GPS-Garmin-nuvi-1390/">Fix Frozen GPS Garmin nuvi 1390<span class="entry-date"> - <time datetime="2014-06-08T00:00:00+09:30" itemprop="datePublished">June 08, 2014</time></a></li>
-          
-        
-      
-      
-    
-  </ul>
- 
-  <h2 id="iTunes">Itunes</h2>
-  <ul class="post-list">
-      
-      
-        
-          
-            <li><a href="//lawrenceting.github.io/applescript/itunes/2014/08/09/Script-for-iTunes-Open-Selected-in-VLC/">Script for iTunes - Open Selected in VLC<span class="entry-date"> - <time datetime="2014-08-09T00:00:00+09:30" itemprop="datePublished">August 09, 2014</time></a></li>
-          
-        
-      
-      
-    
-  </ul>
-
-    </div>
-
-  </body>
-</html>
+{% endfor %}
