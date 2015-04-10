@@ -21,7 +21,9 @@
 			
 			<div class="panel-body">
 				<center>
-					<img class="img-responsive" src="images/automator.jpg" alt="HTML5">
+					<a href="#automator-services">
+						<img class="img-responsive" src="images/automator.jpg" alt="HTML5">
+					</a>
 				</center>
 				<p>Collection of atomator services I've written and use to improve my workflow.</p>
 				
