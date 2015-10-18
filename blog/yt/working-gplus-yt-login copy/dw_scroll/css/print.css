@@ -1,0 +1,19 @@
+/*  */
+
+div#container, div#wn { 
+    position:static;
+    width:auto; height:auto;
+	overflow:visible;
+	}
+div.content { 
+	position:static !important; /* !important to override inline style (set in code) */
+    visibility:visible;
+	}
+div#scrollbar { 
+  display:none;
+  }
+
+  
+#load_links {
+    display:none;
+    }

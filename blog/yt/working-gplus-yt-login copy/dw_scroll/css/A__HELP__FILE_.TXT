@@ -1,0 +1,21 @@
+Style sheet files in this folder are named to match the example document that includes them. 
+
+That is, the example scrollbar.html uses a style sheet names scrollbar.css,
+scrollbar_h.html uses scrollbar_h.css, ...
+
+CSS files are included in the example documents using code in the head of the document (for accessibility); for example: 
+
+// if code supported, link in the style sheet (optional) and call the init function onload
+if ( dw_scrollObj.isSupported() ) {
+    dw_Util.writeStyleSheet('css/scrollbar.css');
+    dw_Event.add( window, 'load', init_dw_Scroll);
+}
+
+
+Using xml and need to avoid document.write? Another function is available: 
+dw_Util.addLinkCSS('css/scrollbar.css')
+
+Code comments include helpful information.
+
+More information is available in the online documentation at:
+http://www.dyn-web.com/code/scroll/documentation.php
