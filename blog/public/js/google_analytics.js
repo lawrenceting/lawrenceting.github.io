@@ -3,6 +3,6 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-47200464-1', 'lawrenceting.tk');
+  ga('create', 'UA-47200464-1', 'lawrenceting.github.io');
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
